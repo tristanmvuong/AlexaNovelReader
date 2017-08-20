@@ -4,7 +4,6 @@ import urllib.request
 
 
 def alexa_handler(event, context):
-    print(event)
     app_id = ""
     response_size = 10
 
@@ -60,17 +59,13 @@ def alexa_handler(event, context):
                 real_novel_name = \
                     ((db.child("synonyms").order_by_key().equal_to(novel_name).get(user['idToken'])).val())[novel_name]
 
-                response_text = ''
                 novel_text = get_novel_text(db, user, real_novel_name, chapter_num)
                 if novel_text is not None:
-                    text = novel_text.find_all(exclude_paging_links)
-                    length = len(text)
-                    end = response_size if response_size < length else length
+                    text_slice = get_novel_text_slice(novel_text, 0, response_size)
 
-                    for tag in text[0:end]:
-                                response_text += tag.string + ' '
+                    response_text = text_slice[0]
 
-                    response['sessionAttributes']['end'] = end
+                    response['sessionAttributes']['end'] = text_slice[1]
                     response['sessionAttributes']['currentNovel'] = real_novel_name
                     response['sessionAttributes']['currentChapter'] = chapter_num
                 else:
@@ -83,13 +78,18 @@ def alexa_handler(event, context):
 
                         novel_text = get_novel_text(db, user, novel_name, chapter_num)
                         if novel_text is not None:
-                            text_slice = get_novel_text_slice(novel_text, event, response_size)
+                            if 'end' in event['session']['attributes']:
+                                end = int(event['session']['attributes']['end'])
 
-                            response_text = text_slice[0]
+                                text_slice = get_novel_text_slice(novel_text, end, response_size)
 
-                            response['sessionAttributes']['end'] = text_slice[1]
-                            response['sessionAttributes']['currentNovel'] = novel_name
-                            response['sessionAttributes']['currentChapter'] = chapter_num
+                                response_text = text_slice[0]
+
+                                response['sessionAttributes']['end'] = text_slice[1]
+                                response['sessionAttributes']['currentNovel'] = novel_name
+                                response['sessionAttributes']['currentChapter'] = chapter_num
+                            else:
+                                response_text = 'Missing session data'
                         else:
                             response_text = "Novel text not found"
                     else:
@@ -105,7 +105,7 @@ def alexa_handler(event, context):
 
                         novel_text = get_novel_text(db, user, novel_name, chapter_num)
                         if novel_text is not None:
-                            text_slice = get_novel_text_slice(novel_text, event, response_size)
+                            text_slice = get_novel_text_slice(novel_text, 0, response_size)
 
                             response_text = text_slice[0]
 
@@ -151,27 +151,23 @@ def get_novel_text(db, user, title, chapter):
     return soup.find(itemprop='articleBody')
 
 
-def get_novel_text_slice(novel_text, event, response_size):
+def get_novel_text_slice(novel_text, start, response_size):
     text = novel_text.find_all(exclude_paging_links)
     length = len(text)
     new_end = -1
     response_text = ''
-    if 'end' in event['session']['attributes']:
-        end = int(event['session']['attributes']['end'])
-        if end < length:
-            if response_size + end < length:
-                new_end = response_size + end
-            else:
-                new_end = length
-
-            for tag in text[end:new_end]:
-                response_text += tag.string + ' '
-
-            if new_end == length:
-                response_text += '. End of chapter. Next chapter?'
+    if start < length:
+        if response_size + start < length:
+            new_end = response_size + start
         else:
-            response_text = "End of chapter. Would you like to read the next chapter?"
+            new_end = length
+
+        for tag in text[start:new_end]:
+            response_text += tag.string + ' '
+
+        if new_end == length:
+            response_text += '. End of chapter. Next chapter?'
     else:
-        response_text = 'Missing session data'
+        response_text = "End of chapter. Would you like to read the next chapter?"
 
     return [response_text, new_end]
