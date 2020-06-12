@@ -23,7 +23,8 @@ def main():
         else:
             soup = bs4.BeautifulSoup(page, 'html.parser')
             for item in soup.find_all('div', class_='post-title'):
-                novel_list += '"' + item.find('a').get_text() + '"' + ',\n'
+                a = item.find('a')
+                novel_list += '"' + a.get_text() + '"' + ',' + a.get('href') + ',\n'
 
             page_num += 1
 
