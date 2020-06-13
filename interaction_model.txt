@@ -1,0 +1,3615 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "boxnovel reader",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ContinueReading",
+                    "slots": [],
+                    "samples": [
+                        "Continue Reading from boxnovel reader"
+                    ]
+                },
+                {
+                    "name": "NextChapter",
+                    "slots": [],
+                    "samples": [
+                        "Next Chapter from boxnovel reader"
+                    ]
+                },
+                {
+                    "name": "ReadNovel",
+                    "slots": [
+                        {
+                            "name": "novelName",
+                            "type": "boxNovel"
+                        },
+                        {
+                            "name": "chapterNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{chapterNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Read {novelName} at chapter {chapterNumber} from boxnovel reader",
+                        "Read {novelName} from boxnovel reader"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "boxNovel",
+                    "values": [
+                        {
+                            "id": "spare-me-great-lord/",
+                            "name": {
+                                "value": "Spare Me, Great Lord!"
+                            }
+                        },
+                        {
+                            "id": "one-birth-two-treasures-the-billionaires-sweet-love/",
+                            "name": {
+                                "value": "One Birth Two Treasures: The Billionaire’s Sweet Love"
+                            }
+                        },
+                        {
+                            "id": "the-indomitable-master-of-elixirs-webnovel/",
+                            "name": {
+                                "value": "The Indomitable Master of Elixirs-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "the-wealthy-psychic-lady-99-stolen-kisses/",
+                            "name": {
+                                "value": "The Wealthy Psychic Lady: 99 Stolen Kisses"
+                            }
+                        },
+                        {
+                            "id": "the-divine-physicians-overbearing-wife/",
+                            "name": {
+                                "value": "The Divine Physician’s Overbearing Wife"
+                            }
+                        },
+                        {
+                            "id": "endless-pampering-only-for-you/",
+                            "name": {
+                                "value": "Endless Pampering Only For You"
+                            }
+                        },
+                        {
+                            "id": "evil-prince-come-play-with-me/",
+                            "name": {
+                                "value": "Evil Prince, Come Play With Me"
+                            }
+                        },
+                        {
+                            "id": "the-human-emperor/",
+                            "name": {
+                                "value": "The Human Emperor"
+                            }
+                        },
+                        {
+                            "id": "nine-sun-god-king/",
+                            "name": {
+                                "value": "Nine Sun God King"
+                            }
+                        },
+                        {
+                            "id": "medical-master/",
+                            "name": {
+                                "value": "Medical Master"
+                            }
+                        },
+                        {
+                            "id": "i-have-a-mansion-in-the-post-apocalyptic-world/",
+                            "name": {
+                                "value": "I Have a Mansion in the Post-apocalyptic World"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-godly-prodigal/",
+                            "name": {
+                                "value": "Rebirth of the Godly Prodigal"
+                            }
+                        },
+                        {
+                            "id": "my-fury-will-burn-the-heavens/",
+                            "name": {
+                                "value": "Fury Towards The Burning Heaven"
+                            }
+                        },
+                        {
+                            "id": "scholars-advanced-technological-system/",
+                            "name": {
+                                "value": "Scholar’s Advanced Technological System"
+                            }
+                        },
+                        {
+                            "id": "the-heir-is-here-quiet-down-school-prince/",
+                            "name": {
+                                "value": "The Heir is Here: Quiet Down, School Prince!"
+                            }
+                        },
+                        {
+                            "id": "isaac/",
+                            "name": {
+                                "value": "Isaac"
+                            }
+                        },
+                        {
+                            "id": "elite-doting-marriage-crafty-husband-aloof-cute-wife/",
+                            "name": {
+                                "value": "Elite Doting Marriage: Crafty Husband, Aloof Cute Wife"
+                            }
+                        },
+                        {
+                            "id": "legend-of-swordsman/",
+                            "name": {
+                                "value": "Legend of Swordsman"
+                            }
+                        },
+                        {
+                            "id": "great-doctor-ling-ran/",
+                            "name": {
+                                "value": "Great Doctor Ling Ran"
+                            }
+                        },
+                        {
+                            "id": "dragon-marked-war-god/",
+                            "name": {
+                                "value": "Dragon-Marked War God"
+                            }
+                        },
+                        {
+                            "id": "virtual-world-peerless-white-emperor/",
+                            "name": {
+                                "value": "Virtual World: Peerless White Emperor"
+                            }
+                        },
+                        {
+                            "id": "three-meals-of-a-reincarnator/",
+                            "name": {
+                                "value": "Three Meals of a Reincarnator"
+                            }
+                        },
+                        {
+                            "id": "mesmerizing-ghost-doctor/",
+                            "name": {
+                                "value": "Mesmerizing Ghost Doctor"
+                            }
+                        },
+                        {
+                            "id": "the-tutorial-is-too-hard/",
+                            "name": {
+                                "value": "The Tutorial Is Too Hard"
+                            }
+                        },
+                        {
+                            "id": "black-irons-glory/",
+                            "name": {
+                                "value": "Black Iron’s Glory"
+                            }
+                        },
+                        {
+                            "id": "great-demon-king/",
+                            "name": {
+                                "value": "Great Demon King"
+                            }
+                        },
+                        {
+                            "id": "ace-of-the-dragon-division/",
+                            "name": {
+                                "value": "Ace of the Dragon Division"
+                            }
+                        },
+                        {
+                            "id": "master-of-untold-daos/",
+                            "name": {
+                                "value": "Master of Untold Daos"
+                            }
+                        },
+                        {
+                            "id": "the-amber-sword/",
+                            "name": {
+                                "value": "The Amber Sword"
+                            }
+                        },
+                        {
+                            "id": "emperor-of-steel/",
+                            "name": {
+                                "value": "Emperor of Steel"
+                            }
+                        },
+                        {
+                            "id": "i-am-a-legendary-boss/",
+                            "name": {
+                                "value": "I Am A Legendary BOSS"
+                            }
+                        },
+                        {
+                            "id": "supreme-uprising/",
+                            "name": {
+                                "value": "Supreme Uprising"
+                            }
+                        },
+                        {
+                            "id": "adorable-treasured-fox-divine-doctor-mother-overturning-the-heavens/",
+                            "name": {
+                                "value": "Adorable Treasured Fox: Divine Doctor Mother Overturning The Heavens!"
+                            }
+                        },
+                        {
+                            "id": "super-detective-in-the-fictional-world/",
+                            "name": {
+                                "value": "Super Detective in the Fictional World"
+                            }
+                        },
+                        {
+                            "id": "rebirth-to-a-military-marriage-good-morning-chief/",
+                            "name": {
+                                "value": "Rebirth to a Military Marriage: Good Morning Chief"
+                            }
+                        },
+                        {
+                            "id": "abe-the-wizard/",
+                            "name": {
+                                "value": "Abe the Wizard"
+                            }
+                        },
+                        {
+                            "id": "crossing-to-the-future-its-not-easy-to-be-a-man/",
+                            "name": {
+                                "value": "Crossing to the Future, it’s Not Easy to Be a Man"
+                            }
+                        },
+                        {
+                            "id": "reincarnation-of-the-businesswoman-at-school/",
+                            "name": {
+                                "value": "Reincarnation Of The Businesswoman At School"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-strongest-female-emperor/",
+                            "name": {
+                                "value": "Rebirth of the Strongest Empress"
+                            }
+                        },
+                        {
+                            "id": "the-first-order/",
+                            "name": {
+                                "value": "The First Order"
+                            }
+                        },
+                        {
+                            "id": "let-me-game-in-peace/",
+                            "name": {
+                                "value": "Let Me Game in Peace"
+                            }
+                        },
+                        {
+                            "id": "martial-peak/",
+                            "name": {
+                                "value": "Martial Peak"
+                            }
+                        },
+                        {
+                            "id": "the-legendary-mechanic/",
+                            "name": {
+                                "value": "The Legendary Mechanic"
+                            }
+                        },
+                        {
+                            "id": "lord-of-the-mysteries-webnovel/",
+                            "name": {
+                                "value": "Lord of the Mysteries-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "venerated-venomous-consort/",
+                            "name": {
+                                "value": "Venerated Venomous Consort"
+                            }
+                        },
+                        {
+                            "id": "his-breathtaking-and-shimmering-light/",
+                            "name": {
+                                "value": "His Breathtaking and Shimmering Light"
+                            }
+                        },
+                        {
+                            "id": "genius-doctor-black-belly-miss/",
+                            "name": {
+                                "value": "Genius Doctor: Black Belly Miss"
+                            }
+                        },
+                        {
+                            "id": "divine-doctor-daughter-of-the-first-wife/",
+                            "name": {
+                                "value": "Divine Doctor: Daughter of the First Wife"
+                            }
+                        },
+                        {
+                            "id": "universes-ultimate-boss/",
+                            "name": {
+                                "value": "Universe’s Ultimate BOSS"
+                            }
+                        },
+                        {
+                            "id": "nine-star-burden/",
+                            "name": {
+                                "value": "Nine Star Burden"
+                            }
+                        },
+                        {
+                            "id": "my-mr-gu-is-courting-death-again/",
+                            "name": {
+                                "value": "My Mr. Gu is Courting Death Again"
+                            }
+                        },
+                        {
+                            "id": "i-am-a-prodigy/",
+                            "name": {
+                                "value": "I Am A Prodigy"
+                            }
+                        },
+                        {
+                            "id": "lifetime-of-bliss-and-contentment-with-you/",
+                            "name": {
+                                "value": "Lifetime of Bliss And Contentment With You"
+                            }
+                        },
+                        {
+                            "id": "the-queen-of-everything/",
+                            "name": {
+                                "value": "The Queen of Everything"
+                            }
+                        },
+                        {
+                            "id": "cant-take-my-eyes-off-you/",
+                            "name": {
+                                "value": "Can’t Take My Eyes Off You"
+                            }
+                        },
+                        {
+                            "id": "wife-is-fierce-dont-mess-with-her/",
+                            "name": {
+                                "value": "Wife is Fierce, Don’t Mess With Her!"
+                            }
+                        },
+                        {
+                            "id": "building-the-ultimate-fantasy/",
+                            "name": {
+                                "value": "Building The Ultimate Fantasy"
+                            }
+                        },
+                        {
+                            "id": "i-have-countless-legendary-swords/",
+                            "name": {
+                                "value": "I Have Countless Legendary Swords!"
+                            }
+                        },
+                        {
+                            "id": "sweetest-top-actress-in-my-home/",
+                            "name": {
+                                "value": "Sweetest Top Actress in My Home"
+                            }
+                        },
+                        {
+                            "id": "nine-astra-skies/",
+                            "name": {
+                                "value": "Nine Astra Skies"
+                            }
+                        },
+                        {
+                            "id": "the-mightiest-little-peasant/",
+                            "name": {
+                                "value": "The Mightiest Little Peasant"
+                            }
+                        },
+                        {
+                            "id": "she-became-a-heartbreaker-after-entering-the-novel/",
+                            "name": {
+                                "value": "She Became a Heartbreaker After Entering the Novel"
+                            }
+                        },
+                        {
+                            "id": "my-100-day-secret-marriage-with-the-boss/",
+                            "name": {
+                                "value": "My 100-Day Secret Marriage With The Boss"
+                            }
+                        },
+                        {
+                            "id": "the-anarchic-consort/",
+                            "name": {
+                                "value": "The Anarchic Consort"
+                            }
+                        },
+                        {
+                            "id": "demons-beside-you/",
+                            "name": {
+                                "value": "Demons Beside You"
+                            }
+                        },
+                        {
+                            "id": "god-of-fishing/",
+                            "name": {
+                                "value": "God of Fishing"
+                            }
+                        },
+                        {
+                            "id": "to-my-dear-mr-huo/",
+                            "name": {
+                                "value": "To My Dear Mr. Huo"
+                            }
+                        },
+                        {
+                            "id": "my-sweet-physician-wife-calls-the-shots/",
+                            "name": {
+                                "value": "My Sweet Physician Wife Calls The Shots"
+                            }
+                        },
+                        {
+                            "id": "stubborn-love-of-a-roguish-scion/",
+                            "name": {
+                                "value": "Stubborn Love of a Roguish Scion"
+                            }
+                        },
+                        {
+                            "id": "maam-you-have-been-uncovered/",
+                            "name": {
+                                "value": "Ma’am You Have Been Uncovered"
+                            }
+                        },
+                        {
+                            "id": "divine-brilliance/",
+                            "name": {
+                                "value": "Divine Brilliance"
+                            }
+                        },
+                        {
+                            "id": "master-of-the-end-times/",
+                            "name": {
+                                "value": "Master of the End Times"
+                            }
+                        },
+                        {
+                            "id": "ninth-in-the-world/",
+                            "name": {
+                                "value": "Ninth In the World"
+                            }
+                        },
+                        {
+                            "id": "so-youre-such-a-doctor-song/",
+                            "name": {
+                                "value": "So You’re Such A Doctor Song"
+                            }
+                        },
+                        {
+                            "id": "the-city-of-terror/",
+                            "name": {
+                                "value": "The City of Terror"
+                            }
+                        },
+                        {
+                            "id": "hello-mr-king/",
+                            "name": {
+                                "value": "Hello Mr. King"
+                            }
+                        },
+                        {
+                            "id": "pocket-hunting-dimension/",
+                            "name": {
+                                "value": "Pocket Hunting Dimension"
+                            }
+                        },
+                        {
+                            "id": "mages-are-too-op/",
+                            "name": {
+                                "value": "Mages Are Too OP"
+                            }
+                        },
+                        {
+                            "id": "battle-frenzy/",
+                            "name": {
+                                "value": "Battle Frenzy"
+                            }
+                        },
+                        {
+                            "id": "warriors-promise/",
+                            "name": {
+                                "value": "Warrior’s Promise"
+                            }
+                        },
+                        {
+                            "id": "godly-empress-doctor/",
+                            "name": {
+                                "value": "Godly Empress Doctor"
+                            }
+                        },
+                        {
+                            "id": "young-master-lus-lovely-new-bride/",
+                            "name": {
+                                "value": "Young Master Lu’s Lovely New Bride"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-urban-immortal-cultivator-webnovel/",
+                            "name": {
+                                "value": "Rebirth Of The Urban Immortal Cultivator-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "war-sovereign-soaring-the-heavens/",
+                            "name": {
+                                "value": "War Sovereign Soaring The Heavens"
+                            }
+                        },
+                        {
+                            "id": "unrivaled-medicine-god/",
+                            "name": {
+                                "value": "Unrivaled Medicine God"
+                            }
+                        },
+                        {
+                            "id": "forty-millenniums-of-cultivation/",
+                            "name": {
+                                "value": "Forty Millenniums of Cultivation"
+                            }
+                        },
+                        {
+                            "id": "end-of-the-magic-era/",
+                            "name": {
+                                "value": "End of the Magic Era"
+                            }
+                        },
+                        {
+                            "id": "the-king-of-the-battlefield/",
+                            "name": {
+                                "value": "The King of the Battlefield"
+                            }
+                        },
+                        {
+                            "id": "medical-sovereign/",
+                            "name": {
+                                "value": "Medical Sovereign"
+                            }
+                        },
+                        {
+                            "id": "mr-fu-i-really-love-you/",
+                            "name": {
+                                "value": "Mr Fu, I Really Love You"
+                            }
+                        },
+                        {
+                            "id": "i-might-be-a-fake-cultivator/",
+                            "name": {
+                                "value": "I Might Be A Fake Cultivator"
+                            }
+                        },
+                        {
+                            "id": "48-hours-a-day/",
+                            "name": {
+                                "value": "48 Hours a Day"
+                            }
+                        },
+                        {
+                            "id": "hidden-marriage-99-days-please-restrain-yourself/",
+                            "name": {
+                                "value": "Hidden Marriage 99 Days: Please Restrain Yourself"
+                            }
+                        },
+                        {
+                            "id": "the-good-for-nothing-seventh-miss/",
+                            "name": {
+                                "value": "The Good-for-Nothing Seventh Miss"
+                            }
+                        },
+                        {
+                            "id": "the-bumpy-road-of-marriage-the-ex-wife-is-expecting/",
+                            "name": {
+                                "value": "The Bumpy Road of Marriage: The Ex-Wife Is Expecting"
+                            }
+                        },
+                        {
+                            "id": "good-morning-mister-dragon/",
+                            "name": {
+                                "value": "Good Morning, Mister Dragon!"
+                            }
+                        },
+                        {
+                            "id": "reborn-at-boot-camp-general-dont-mess-around/",
+                            "name": {
+                                "value": "Reborn at Boot Camp: General, Don’t Mess Around!"
+                            }
+                        },
+                        {
+                            "id": "newlyweds-1001-nights-mr-bos-love-life/",
+                            "name": {
+                                "value": "Newlyweds 1001 Nights: Mr. Bo’s Love Life"
+                            }
+                        },
+                        {
+                            "id": "the-most-loving-marriage-in-history-master-mus-pampered-wife/",
+                            "name": {
+                                "value": "The Most Loving Marriage In History: Master Mu’s Pampered Wife"
+                            }
+                        },
+                        {
+                            "id": "the-brilliant-fighting-master/",
+                            "name": {
+                                "value": "The Brilliant Fighting Master"
+                            }
+                        },
+                        {
+                            "id": "sword-among-us/",
+                            "name": {
+                                "value": "Sword Among Us"
+                            }
+                        },
+                        {
+                            "id": "the-legend-of-futian/",
+                            "name": {
+                                "value": "The Legend of Futian"
+                            }
+                        },
+                        {
+                            "id": "league-of-legends-league-of-unknowns/",
+                            "name": {
+                                "value": "League of Legends: League of Unknowns"
+                            }
+                        },
+                        {
+                            "id": "the-legend-of-the-dragon-king/",
+                            "name": {
+                                "value": "The Legend of the Dragon King"
+                            }
+                        },
+                        {
+                            "id": "the-lords-empire/",
+                            "name": {
+                                "value": "The Lord’s Empire"
+                            }
+                        },
+                        {
+                            "id": "godly-model-creator/",
+                            "name": {
+                                "value": "Godly Model Creator"
+                            }
+                        },
+                        {
+                            "id": "the-monk-that-wanted-to-renounce-asceticism/",
+                            "name": {
+                                "value": "The Monk That Wanted To Renounce Asceticism"
+                            }
+                        },
+                        {
+                            "id": "zombie-sister-strategy/",
+                            "name": {
+                                "value": "Zombie Sister Strategy"
+                            }
+                        },
+                        {
+                            "id": "another-worlds-versatile-crafting-master/",
+                            "name": {
+                                "value": "Another World’s Versatile Crafting Master"
+                            }
+                        },
+                        {
+                            "id": "the-rest-of-my-life-is-for-you/",
+                            "name": {
+                                "value": "The Rest Of My Life Is For You"
+                            }
+                        },
+                        {
+                            "id": "beauty-and-the-beast-wolf-hubby-xoxo-webnovel/",
+                            "name": {
+                                "value": "Beauty and the Beast: Wolf Hubby XOXO-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "attack-of-the-adorable-kid-president-daddys-infinite-pampering/",
+                            "name": {
+                                "value": "Attack of the Adorable Kid: President Daddy’s Infinite Pampering"
+                            }
+                        },
+                        {
+                            "id": "the-long-awaited-mr-han/",
+                            "name": {
+                                "value": "The Long-awaited Mr Han"
+                            }
+                        },
+                        {
+                            "id": "you-are-my-unforgettable-love/",
+                            "name": {
+                                "value": "You Are My Unforgettable Love"
+                            }
+                        },
+                        {
+                            "id": "provocative-fiery-wife-my-superior-is-a-affectionate-spitfire/",
+                            "name": {
+                                "value": "Provocative Fiery Wife: My Superior is a Affectionate Spitfire"
+                            }
+                        },
+                        {
+                            "id": "sweet-adorable-wife-please-kiss-slower/",
+                            "name": {
+                                "value": "Sweet Adorable Wife, Please Kiss Slower!"
+                            }
+                        },
+                        {
+                            "id": "godly-farmer-doctor-arrogant-husband-cant-afford-to-offend/",
+                            "name": {
+                                "value": "Godly Farmer Doctor: Arrogant Husband, Can’t Afford to Offend!"
+                            }
+                        },
+                        {
+                            "id": "young-master-gu-please-be-gentle/",
+                            "name": {
+                                "value": "Young Master Gu, Please Be Gentle"
+                            }
+                        },
+                        {
+                            "id": "national-school-prince-is-a-girl/",
+                            "name": {
+                                "value": "National School Prince Is A Girl"
+                            }
+                        },
+                        {
+                            "id": "age-of-adepts/",
+                            "name": {
+                                "value": "Age of Adepts"
+                            }
+                        },
+                        {
+                            "id": "beware-mr-officer-tread-carefully/",
+                            "name": {
+                                "value": "Beware Mr. Officer, Tread Carefully!"
+                            }
+                        },
+                        {
+                            "id": "throne-of-magical-arcana/",
+                            "name": {
+                                "value": "Throne of Magical Arcana"
+                            }
+                        },
+                        {
+                            "id": "i-wish-mo-all-the-best/",
+                            "name": {
+                                "value": "I Wish Mo All the Best"
+                            }
+                        },
+                        {
+                            "id": "the-genius-system-without-equal/",
+                            "name": {
+                                "value": "The Genius System Without Equal"
+                            }
+                        },
+                        {
+                            "id": "forensic-doctor-moe-wife/",
+                            "name": {
+                                "value": "Forensic Doctor, Moe Wife"
+                            }
+                        },
+                        {
+                            "id": "the-beautiful-wife-of-the-whirlwind-marriage/",
+                            "name": {
+                                "value": "The Beautiful Wife of the Whirlwind Marriage"
+                            }
+                        },
+                        {
+                            "id": "god-emperor/",
+                            "name": {
+                                "value": "God Emperor"
+                            }
+                        },
+                        {
+                            "id": "rich-young-mistress-young-master-xies-dearest-beloved-wife/",
+                            "name": {
+                                "value": "Rich Young Mistress: Young Master Xie’s Dearest Beloved Wife"
+                            }
+                        },
+                        {
+                            "id": "reborn-aristocrat-return-of-the-vicious-heiress/",
+                            "name": {
+                                "value": "Reborn Aristocrat: Return of the Vicious Heiress"
+                            }
+                        },
+                        {
+                            "id": "genius-daddy-in-the-city/",
+                            "name": {
+                                "value": "Genius Daddy in the City"
+                            }
+                        },
+                        {
+                            "id": "mini-world-of-endless-fun-awaits/",
+                            "name": {
+                                "value": "Mini World Of Endless Fun Awaits"
+                            }
+                        },
+                        {
+                            "id": "the-man-from-hell/",
+                            "name": {
+                                "value": "The Man from Hell"
+                            }
+                        },
+                        {
+                            "id": "a-world-worth-protecting/",
+                            "name": {
+                                "value": "A World Worth Protecting"
+                            }
+                        },
+                        {
+                            "id": "the-great-thief/",
+                            "name": {
+                                "value": "The Great Thief"
+                            }
+                        },
+                        {
+                            "id": "a-stay-at-home-dads-restaurant-in-an-alternate-world/",
+                            "name": {
+                                "value": "A Stay-at-home Dad’s Restaurant In An Alternate World"
+                            }
+                        },
+                        {
+                            "id": "reverend-insanity/",
+                            "name": {
+                                "value": "Reverend Insanity"
+                            }
+                        },
+                        {
+                            "id": "mmorpg-the-almighty-ring/",
+                            "name": {
+                                "value": "MMORPG: The Almighty Ring"
+                            }
+                        },
+                        {
+                            "id": "mmorpg-martial-gamer/",
+                            "name": {
+                                "value": "MMORPG: Martial Gamer"
+                            }
+                        },
+                        {
+                            "id": "worlds-apocalypse-online/",
+                            "name": {
+                                "value": "Worlds’ Apocalypse Online"
+                            }
+                        },
+                        {
+                            "id": "invincible-divine-dragons-cultivation-system/",
+                            "name": {
+                                "value": "Invincible Divine Dragon’s Cultivation System"
+                            }
+                        },
+                        {
+                            "id": "super-gene-webnovel/",
+                            "name": {
+                                "value": "Super Gene-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "eternal-sacred-king/",
+                            "name": {
+                                "value": "Eternal Sacred King"
+                            }
+                        },
+                        {
+                            "id": "the-unparalleled-spiritual-doctor-demon-emperors-defiant-love/",
+                            "name": {
+                                "value": "The Unparalleled Spiritual Doctor: Demon Emperor’s Defiant Love"
+                            }
+                        },
+                        {
+                            "id": "my-dangerous-billionaire-husband/",
+                            "name": {
+                                "value": "My Dangerous Billionaire Husband"
+                            }
+                        },
+                        {
+                            "id": "ascending-do-not-disturb/",
+                            "name": {
+                                "value": "Ascending, Do Not Disturb"
+                            }
+                        },
+                        {
+                            "id": "ferocious-boss-hubby-lets-get-married/",
+                            "name": {
+                                "value": "Ferocious Boss: Hubby, Let’s Get Married"
+                            }
+                        },
+                        {
+                            "id": "sword-of-dawnbreaker/",
+                            "name": {
+                                "value": "Sword of Dawnbreaker"
+                            }
+                        },
+                        {
+                            "id": "abyss-domination/",
+                            "name": {
+                                "value": "Abyss Domination"
+                            }
+                        },
+                        {
+                            "id": "a-star-reborn-the-queens-return/",
+                            "name": {
+                                "value": "A Star Reborn: The Queen’s Return"
+                            }
+                        },
+                        {
+                            "id": "wife-doting-addiction%ef%bc%9amy-abducted-tsundere-husband/",
+                            "name": {
+                                "value": "Wife Doting Addiction：My Abducted Tsundere Husband"
+                            }
+                        },
+                        {
+                            "id": "my-secretary-is-a-little-sweet/",
+                            "name": {
+                                "value": "My Secretary is a Little Sweet"
+                            }
+                        },
+                        {
+                            "id": "warlock-apprentice/",
+                            "name": {
+                                "value": "Warlock Apprentice"
+                            }
+                        },
+                        {
+                            "id": "i-dont-want-to-defy-the-heavens/",
+                            "name": {
+                                "value": "I Don’t Want To Defy The Heavens"
+                            }
+                        },
+                        {
+                            "id": "the-days-of-being-in-a-fake-marriage-with-the-ceo/",
+                            "name": {
+                                "value": "The Days of Being in a Fake Marriage with the CEO"
+                            }
+                        },
+                        {
+                            "id": "nine-yang-sword-saint/",
+                            "name": {
+                                "value": "Nine Yang Sword Saint"
+                            }
+                        },
+                        {
+                            "id": "priceless-new-bride-accidentally-offending-the-dangerous-ceo/",
+                            "name": {
+                                "value": "Priceless New Bride: Accidentally Offending The Dangerous CEO"
+                            }
+                        },
+                        {
+                            "id": "divine-card-creator-webnovel/",
+                            "name": {
+                                "value": "Divine Card Creator-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "tales-of-herding-gods/",
+                            "name": {
+                                "value": "Tales of Herding Gods"
+                            }
+                        },
+                        {
+                            "id": "sweet-love-1v1-spoiled-by-the-executive/",
+                            "name": {
+                                "value": "Sweet Love 1V1: Spoiled by The Executive"
+                            }
+                        },
+                        {
+                            "id": "i-am-the-god-of-games/",
+                            "name": {
+                                "value": "I Am the God of Games"
+                            }
+                        },
+                        {
+                            "id": "the-tempestuous-consort-wilfully-pampered-by-the-beastly-highness/",
+                            "name": {
+                                "value": "The Tempestuous Consort – Wilfully Pampered by the Beastly Highness"
+                            }
+                        },
+                        {
+                            "id": "sweet-rustic-love-four-brothers-wife/",
+                            "name": {
+                                "value": "Sweet Rustic Love: Four Brothers’ Wife"
+                            }
+                        },
+                        {
+                            "id": "the-problem-with-marrying-rich-out-of-the-way-ex/",
+                            "name": {
+                                "value": "The Problem with Marrying Rich: Out of the Way, Ex"
+                            }
+                        },
+                        {
+                            "id": "goodnight-kiss-from-my-rumored-husband-2/",
+                            "name": {
+                                "value": "Goodnight Kiss from My Rumored Husband"
+                            }
+                        },
+                        {
+                            "id": "the-daughter-of-a-wealthy-family-who-had-been-reborn-earned-a-lot-of-money/",
+                            "name": {
+                                "value": "The daughter of a wealthy family who had been reborn earned a lot of money"
+                            }
+                        },
+                        {
+                            "id": "forced-marriage-vip-front-seat-my-superstar-ex-wife-is-very-popular/",
+                            "name": {
+                                "value": "Forced Marriage VIP Front-Seat: My Superstar Ex-wife is very Popular"
+                            }
+                        },
+                        {
+                            "id": "my-crown-prince-consort-is-a-firecracker/",
+                            "name": {
+                                "value": "My Crown Prince Consort Is a Firecracker!"
+                            }
+                        },
+                        {
+                            "id": "priceless-baby-101-bedside-stories/",
+                            "name": {
+                                "value": "Priceless Baby: 101 Bedside Stories"
+                            }
+                        },
+                        {
+                            "id": "the-boss-behind-the-game/",
+                            "name": {
+                                "value": "The Boss Behind The Game"
+                            }
+                        },
+                        {
+                            "id": "worlds-best-martial-artist/",
+                            "name": {
+                                "value": "World’s Best Martial Artist"
+                            }
+                        },
+                        {
+                            "id": "growing-fond-of-you-mr-nian/",
+                            "name": {
+                                "value": "Growing Fond of You, Mr Nian"
+                            }
+                        },
+                        {
+                            "id": "prodigiously-amazing-weaponsmith/",
+                            "name": {
+                                "value": "Prodigiously Amazing Weaponsmith"
+                            }
+                        },
+                        {
+                            "id": "beauty-and-the-bodyguard/",
+                            "name": {
+                                "value": "Beauty and the Bodyguard"
+                            }
+                        },
+                        {
+                            "id": "summoning-the-holy-sword/",
+                            "name": {
+                                "value": "Summoning the Holy Sword"
+                            }
+                        },
+                        {
+                            "id": "nightmares-call/",
+                            "name": {
+                                "value": "Nightmare’s Call"
+                            }
+                        },
+                        {
+                            "id": "the-martial-emperor-with-dragon-blood/",
+                            "name": {
+                                "value": "The Martial Emperor with Dragon Blood"
+                            }
+                        },
+                        {
+                            "id": "100m-yuan-wife-buy-one-get-one/",
+                            "name": {
+                                "value": "100m Yuan Wife: Buy One Get One"
+                            }
+                        },
+                        {
+                            "id": "priceless-babys-super-daddy/",
+                            "name": {
+                                "value": "Priceless Baby’s Super Daddy"
+                            }
+                        },
+                        {
+                            "id": "cthulhu-gonfalon/",
+                            "name": {
+                                "value": "Cthulhu Gonfalon"
+                            }
+                        },
+                        {
+                            "id": "gourmet-of-another-world/",
+                            "name": {
+                                "value": "Gourmet of Another World"
+                            }
+                        },
+                        {
+                            "id": "dark-moon-era/",
+                            "name": {
+                                "value": "Dark Moon Era"
+                            }
+                        },
+                        {
+                            "id": "silver-overlord/",
+                            "name": {
+                                "value": "Silver Overlord"
+                            }
+                        },
+                        {
+                            "id": "my-youth-began-with-him-webnovel/",
+                            "name": {
+                                "value": "My Youth Began With Him-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "medical-princess/",
+                            "name": {
+                                "value": "Medical Princess"
+                            }
+                        },
+                        {
+                            "id": "the-devils-cage/",
+                            "name": {
+                                "value": "The Devil’s Cage"
+                            }
+                        },
+                        {
+                            "id": "the-divine-nine-dragon-cauldron/",
+                            "name": {
+                                "value": "The Divine Nine-Dragon Cauldron"
+                            }
+                        },
+                        {
+                            "id": "young-master-mo-are-you-done-kissing/",
+                            "name": {
+                                "value": "Young Master Mo, Are You Done Kissing?"
+                            }
+                        },
+                        {
+                            "id": "the-portal-of-wonderland/",
+                            "name": {
+                                "value": "The Portal of Wonderland"
+                            }
+                        },
+                        {
+                            "id": "white-robed-chief/",
+                            "name": {
+                                "value": "White-Robed Chief"
+                            }
+                        },
+                        {
+                            "id": "gourmet-food-supplier/",
+                            "name": {
+                                "value": "Gourmet Food Supplier"
+                            }
+                        },
+                        {
+                            "id": "alchemy-emperor-of-the-divine-dao/",
+                            "name": {
+                                "value": "Alchemy Emperor of the Divine Dao"
+                            }
+                        },
+                        {
+                            "id": "badge-in-azure/",
+                            "name": {
+                                "value": "Badge in Azure"
+                            }
+                        },
+                        {
+                            "id": "elixir-supplier/",
+                            "name": {
+                                "value": "Elixir Supplier"
+                            }
+                        },
+                        {
+                            "id": "carefree-path-of-dreams/",
+                            "name": {
+                                "value": "Carefree Path of Dreams"
+                            }
+                        },
+                        {
+                            "id": "transcending-the-nine-heavens/",
+                            "name": {
+                                "value": "Transcending the Nine Heavens"
+                            }
+                        },
+                        {
+                            "id": "way-of-the-devil/",
+                            "name": {
+                                "value": "Way of the Devil"
+                            }
+                        },
+                        {
+                            "id": "fatal-shot/",
+                            "name": {
+                                "value": "Fatal Shot"
+                            }
+                        },
+                        {
+                            "id": "the-supreme-lord-donghuang/",
+                            "name": {
+                                "value": "The Supreme Lord Donghuang"
+                            }
+                        },
+                        {
+                            "id": "the-empress-livestream/",
+                            "name": {
+                                "value": "The Empress’ Livestream"
+                            }
+                        },
+                        {
+                            "id": "coming-of-the-villain-boss/",
+                            "name": {
+                                "value": "Coming of the Villain Boss!"
+                            }
+                        },
+                        {
+                            "id": "invincible-kungfu-healer/",
+                            "name": {
+                                "value": "Invincible Kungfu Healer"
+                            }
+                        },
+                        {
+                            "id": "reborn-super-god-of-war/",
+                            "name": {
+                                "value": "Reborn: Super God of War"
+                            }
+                        },
+                        {
+                            "id": "warlord-of-chaos/",
+                            "name": {
+                                "value": "Warlord of Chaos"
+                            }
+                        },
+                        {
+                            "id": "why-did-you-summon-me/",
+                            "name": {
+                                "value": "Why Did You Summon Me?"
+                            }
+                        },
+                        {
+                            "id": "cultivation-chat-group/",
+                            "name": {
+                                "value": "Cultivation Chat Group"
+                            }
+                        },
+                        {
+                            "id": "kar98k-upon-touchdown/",
+                            "name": {
+                                "value": "Kar98K Upon Touchdown!"
+                            }
+                        },
+                        {
+                            "id": "insanely-pampered-wife-divine-doctor-fifth-young-miss/",
+                            "name": {
+                                "value": "Insanely Pampered Wife: Divine Doctor Fifth Young Miss"
+                            }
+                        },
+                        {
+                            "id": "the-immortals-poison/",
+                            "name": {
+                                "value": "The Immortal’s Poison"
+                            }
+                        },
+                        {
+                            "id": "supreme-emperor-of-swords/",
+                            "name": {
+                                "value": "Supreme Emperor of Swords"
+                            }
+                        },
+                        {
+                            "id": "quick-transmigration-system-male-god-come-here/",
+                            "name": {
+                                "value": "Quick Transmigration System: Male God, Come Here"
+                            }
+                        },
+                        {
+                            "id": "the-king-of-special-warfare/",
+                            "name": {
+                                "value": "The King of Special Warfare"
+                            }
+                        },
+                        {
+                            "id": "hello-heir/",
+                            "name": {
+                                "value": "Hello, Heir"
+                            }
+                        },
+                        {
+                            "id": "versatile-mage/",
+                            "name": {
+                                "value": "Versatile Mage"
+                            }
+                        },
+                        {
+                            "id": "the-favored-son-of-heaven/",
+                            "name": {
+                                "value": "The Favored Son of Heaven"
+                            }
+                        },
+                        {
+                            "id": "lady-sus-revenge/",
+                            "name": {
+                                "value": "Lady Su’s Revenge"
+                            }
+                        },
+                        {
+                            "id": "story-of-a-big-player-from-gangnam/",
+                            "name": {
+                                "value": "Story of a Big Player from Gangnam"
+                            }
+                        },
+                        {
+                            "id": "hello-mr-major-general/",
+                            "name": {
+                                "value": "Hello, Mr. Major General"
+                            }
+                        },
+                        {
+                            "id": "reborn-little-girl-wont-give-up/",
+                            "name": {
+                                "value": "Reborn Little Girl Won’t Give Up"
+                            }
+                        },
+                        {
+                            "id": "reborn-spoiled-ming-wangfei/",
+                            "name": {
+                                "value": "Reborn Spoiled Ming Wangfei"
+                            }
+                        },
+                        {
+                            "id": "grasping-evil/",
+                            "name": {
+                                "value": "Grasping Evil"
+                            }
+                        },
+                        {
+                            "id": "the-silly-alchemist/",
+                            "name": {
+                                "value": "The Silly Alchemist"
+                            }
+                        },
+                        {
+                            "id": "my-wife-is-a-beautiful-ceo/",
+                            "name": {
+                                "value": "My Wife is a Beautiful CEO"
+                            }
+                        },
+                        {
+                            "id": "the-rise-of-otaku/",
+                            "name": {
+                                "value": "The Rise of Otaku"
+                            }
+                        },
+                        {
+                            "id": "my-girlfriend-is-a-zombie/",
+                            "name": {
+                                "value": "My Girlfriend is a Zombie"
+                            }
+                        },
+                        {
+                            "id": "bewitching-prince-spoils-his-wife-genius-doctor-unscrupulous-consort/",
+                            "name": {
+                                "value": "Bewitching Prince Spoils His Wife: Genius Doctor Unscrupulous Consort"
+                            }
+                        },
+                        {
+                            "id": "side-character-transmigrations-the-final-boss-is-no-joke/",
+                            "name": {
+                                "value": "Side Character Transmigrations: The Final Boss is No Joke"
+                            }
+                        },
+                        {
+                            "id": "the-highest-bounty/",
+                            "name": {
+                                "value": "The Highest Bounty"
+                            }
+                        },
+                        {
+                            "id": "ultimate-scheming-system/",
+                            "name": {
+                                "value": "Ultimate Scheming System"
+                            }
+                        },
+                        {
+                            "id": "the-law-of-webnovels/",
+                            "name": {
+                                "value": "The Law of Webnovels"
+                            }
+                        },
+                        {
+                            "id": "the-deity-of-war/",
+                            "name": {
+                                "value": "The Deity of War"
+                            }
+                        },
+                        {
+                            "id": "the-eternal-supreme/",
+                            "name": {
+                                "value": "The Eternal Supreme"
+                            }
+                        },
+                        {
+                            "id": "the-devious-first-daughter/",
+                            "name": {
+                                "value": "The Devious First-Daughter"
+                            }
+                        },
+                        {
+                            "id": "nano-machine-retranslated-version/",
+                            "name": {
+                                "value": "Nano Machine (Retranslated Version)"
+                            }
+                        },
+                        {
+                            "id": "chronicles-of-primordial-wars/",
+                            "name": {
+                                "value": "Chronicles of Primordial Wars"
+                            }
+                        },
+                        {
+                            "id": "undead/",
+                            "name": {
+                                "value": "Undead"
+                            }
+                        },
+                        {
+                            "id": "god-of-cooking/",
+                            "name": {
+                                "value": "God of Cooking"
+                            }
+                        },
+                        {
+                            "id": "black-bellied-belle-demon-lord-bite-the-bait-please/",
+                            "name": {
+                                "value": "Black Bellied Belle: Demon Lord, Bite the Bait Please"
+                            }
+                        },
+                        {
+                            "id": "superstars-of-tomorrow/",
+                            "name": {
+                                "value": "Superstars of Tomorrow"
+                            }
+                        },
+                        {
+                            "id": "monster-paradise-webnovel/",
+                            "name": {
+                                "value": "Monster Paradise-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "the-bumpy-road-of-marriage-divorce-now-daddy/",
+                            "name": {
+                                "value": "The Bumpy Road of Marriage: Divorce Now, Daddy"
+                            }
+                        },
+                        {
+                            "id": "heroes-of-marvel/",
+                            "name": {
+                                "value": "Heroes of Marvel"
+                            }
+                        },
+                        {
+                            "id": "my-house-of-horrors/",
+                            "name": {
+                                "value": "My House of Horrors"
+                            }
+                        },
+                        {
+                            "id": "the-king-of-the-worlds/",
+                            "name": {
+                                "value": "The King of The Worlds"
+                            }
+                        },
+                        {
+                            "id": "i-said-make-my-abilities-average/",
+                            "name": {
+                                "value": "I Said Make My Abilities Average!"
+                            }
+                        },
+                        {
+                            "id": "glutton-berserker-the-one-that-exceeds-the-concept-of-levels/",
+                            "name": {
+                                "value": "Glutton Berserker ~The One That Exceeds The Concept Of Levels"
+                            }
+                        },
+                        {
+                            "id": "kingdoms-bloodline/",
+                            "name": {
+                                "value": "Kingdom’s Bloodline"
+                            }
+                        },
+                        {
+                            "id": "evil-emperors-poisonous-consort-divine-doctor-young-miss/",
+                            "name": {
+                                "value": "Evil Emperor’s Poisonous Consort: Divine Doctor Young Miss"
+                            }
+                        },
+                        {
+                            "id": "quick-transmigrating-second-female-leads-counterattack/",
+                            "name": {
+                                "value": "Quick Transmigrating Second Female Lead’s Counterattack"
+                            }
+                        },
+                        {
+                            "id": "the-death-mage-who-doesnt-want-a-fourth-time/",
+                            "name": {
+                                "value": "The Death Mage Who Doesn’t Want a Fourth Time"
+                            }
+                        },
+                        {
+                            "id": "how-to-live-as-the-enemy-prince/",
+                            "name": {
+                                "value": "How to Live as the Enemy Prince"
+                            }
+                        },
+                        {
+                            "id": "soul-land-iv-douluo-dalu-ultimate-fighting/",
+                            "name": {
+                                "value": "Soul Land IV (Douluo Dalu) : Ultimate Fighting"
+                            }
+                        },
+                        {
+                            "id": "the-experimental-log-of-the-crazy-lich/",
+                            "name": {
+                                "value": "The Experimental Log of the Crazy Lich"
+                            }
+                        },
+                        {
+                            "id": "the-man-picked-up-by-the-gods-reboot/",
+                            "name": {
+                                "value": "The Man Picked Up By the Gods (Reboot)"
+                            }
+                        },
+                        {
+                            "id": "kuma-kuma-kuma-bear/",
+                            "name": {
+                                "value": "Kuma Kuma Kuma Bear"
+                            }
+                        },
+                        {
+                            "id": "love-in-the-midst-of-mistaken-identities/",
+                            "name": {
+                                "value": "Love in the Midst of Mistaken Identities"
+                            }
+                        },
+                        {
+                            "id": "losing-money-to-be-a-tycoon/",
+                            "name": {
+                                "value": "Losing Money to Be a Tycoon"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-supreme-celestial-being/",
+                            "name": {
+                                "value": "Rebirth of the Supreme Celestial Being"
+                            }
+                        },
+                        {
+                            "id": "reincarnation-of-the-strongest-sword-god-webnovel/",
+                            "name": {
+                                "value": "Reincarnation Of The Strongest Sword God Webnovel"
+                            }
+                        },
+                        {
+                            "id": "long-live-summons/",
+                            "name": {
+                                "value": "Long Live Summons!"
+                            }
+                        },
+                        {
+                            "id": "the-sword-deity-in-tokyo/",
+                            "name": {
+                                "value": "The Sword Deity in Tokyo"
+                            }
+                        },
+                        {
+                            "id": "i-am-the-monarch/",
+                            "name": {
+                                "value": "I am the Monarch"
+                            }
+                        },
+                        {
+                            "id": "god-of-slaughter/",
+                            "name": {
+                                "value": "God Of Slaughter"
+                            }
+                        },
+                        {
+                            "id": "path-of-medicine-with-a-system/",
+                            "name": {
+                                "value": "Path of Medicine With a System"
+                            }
+                        },
+                        {
+                            "id": "fff-class-trashero/",
+                            "name": {
+                                "value": "FFF-Class Trashero"
+                            }
+                        },
+                        {
+                            "id": "so-i-am-a-demon-descendent/",
+                            "name": {
+                                "value": "So I Am A Demon Descendent!"
+                            }
+                        },
+                        {
+                            "id": "death-progress-bar/",
+                            "name": {
+                                "value": "Death Progress Bar"
+                            }
+                        },
+                        {
+                            "id": "the-end-of-the-worlds-poisonous-mom-and-monster-baby/",
+                            "name": {
+                                "value": "The End Of The World’s Poisonous Mom And Monster Baby"
+                            }
+                        },
+                        {
+                            "id": "chaotic-sword-god/",
+                            "name": {
+                                "value": "Chaotic Sword God"
+                            }
+                        },
+                        {
+                            "id": "evil-awe-inspiring/",
+                            "name": {
+                                "value": "Evil Awe-Inspiring"
+                            }
+                        },
+                        {
+                            "id": "gamers-of-the-underworld-webnovel/",
+                            "name": {
+                                "value": "Gamers of the Underworld-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "shadow-hack/",
+                            "name": {
+                                "value": "Shadow Hack"
+                            }
+                        },
+                        {
+                            "id": "joy-of-life/",
+                            "name": {
+                                "value": "Joy of Life"
+                            }
+                        },
+                        {
+                            "id": "empire-of-the-ring/",
+                            "name": {
+                                "value": "Empire of the Ring"
+                            }
+                        },
+                        {
+                            "id": "god-of-soul-system/",
+                            "name": {
+                                "value": "God Of Soul System"
+                            }
+                        },
+                        {
+                            "id": "so-pure-so-flirtatious/",
+                            "name": {
+                                "value": "So Pure, So Flirtatious"
+                            }
+                        },
+                        {
+                            "id": "dragon-emperor-martial-god/",
+                            "name": {
+                                "value": "Dragon Emperor, Martial God"
+                            }
+                        },
+                        {
+                            "id": "how-to-die-as-heavy-as-mount-tai/",
+                            "name": {
+                                "value": "How To Die As Heavy As Mount Tai"
+                            }
+                        },
+                        {
+                            "id": "npc-town-building-game/",
+                            "name": {
+                                "value": "NPC Town-building Game"
+                            }
+                        },
+                        {
+                            "id": "reborn-into-a-hamster-for-233-days/",
+                            "name": {
+                                "value": "Reborn into a Hamster for 233 Days"
+                            }
+                        },
+                        {
+                            "id": "the-s-classes-that-i-raised/",
+                            "name": {
+                                "value": "The S-Classes That I Raised"
+                            }
+                        },
+                        {
+                            "id": "a-sorcerers-journey/",
+                            "name": {
+                                "value": "A Sorcerer’s Journey"
+                            }
+                        },
+                        {
+                            "id": "a-wizards-secret/",
+                            "name": {
+                                "value": "A Wizard’s Secret"
+                            }
+                        },
+                        {
+                            "id": "the-villains-white-lotus-halo/",
+                            "name": {
+                                "value": "The Villain’s White Lotus Halo"
+                            }
+                        },
+                        {
+                            "id": "perfect-secret-love-the-bad-new-wife-is-a-little-sweet/",
+                            "name": {
+                                "value": "Perfect Secret Love: The Bad New Wife is a Little Sweet"
+                            }
+                        },
+                        {
+                            "id": "the-99th-divorce/",
+                            "name": {
+                                "value": "The 99th Divorce"
+                            }
+                        },
+                        {
+                            "id": "back-then-i-adored-you/",
+                            "name": {
+                                "value": "Back Then, I Adored You"
+                            }
+                        },
+                        {
+                            "id": "realms-in-the-firmament/",
+                            "name": {
+                                "value": "Realms In The Firmament"
+                            }
+                        },
+                        {
+                            "id": "returning-from-the-immortal-world/",
+                            "name": {
+                                "value": "Returning from the Immortal World"
+                            }
+                        },
+                        {
+                            "id": "prestigious-family-marriage-uncle-vs-young-wife/",
+                            "name": {
+                                "value": "Prestigious Family Marriage: Uncle vs Young Wife"
+                            }
+                        },
+                        {
+                            "id": "once-upon-a-time-there-was-a-spirit-sword-mountain/",
+                            "name": {
+                                "value": "Once Upon A Time, There Was A Spirit Sword Mountain"
+                            }
+                        },
+                        {
+                            "id": "the-daily-life-of-the-immortal-king/",
+                            "name": {
+                                "value": "The Daily Life of the Immortal King"
+                            }
+                        },
+                        {
+                            "id": "the-sweetest-medicine/",
+                            "name": {
+                                "value": "The Sweetest Medicine"
+                            }
+                        },
+                        {
+                            "id": "lord-of-the-magical-beasts/",
+                            "name": {
+                                "value": "Lord of the Magical Beasts"
+                            }
+                        },
+                        {
+                            "id": "she-was-born-into-a-wealthy-family/",
+                            "name": {
+                                "value": "She was born into a wealthy family"
+                            }
+                        },
+                        {
+                            "id": "sinister-ex-girlfriend/",
+                            "name": {
+                                "value": "Sinister Ex-Girlfriend"
+                            }
+                        },
+                        {
+                            "id": "library-of-heavens-path-webnovel/",
+                            "name": {
+                                "value": "Library of Heaven’s Path-Webnovel"
+                            }
+                        },
+                        {
+                            "id": "the-cry-of-the-phoenix-which-reached-the-ninth-heaven/",
+                            "name": {
+                                "value": "The Cry of the Phoenix Which Reached the Ninth Heaven"
+                            }
+                        },
+                        {
+                            "id": "warning-tsundere-president/",
+                            "name": {
+                                "value": "WARNING! Tsundere President"
+                            }
+                        },
+                        {
+                            "id": "mister-li-the-heart-bandit/",
+                            "name": {
+                                "value": "Mister Li, the Heart Bandit"
+                            }
+                        },
+                        {
+                            "id": "tales-of-demons-and-gods/",
+                            "name": {
+                                "value": "Tales of Demons and Gods"
+                            }
+                        },
+                        {
+                            "id": "murder-the-dream-guy/",
+                            "name": {
+                                "value": "Murder the Dream Guy"
+                            }
+                        },
+                        {
+                            "id": "soaring-of-galaxia/",
+                            "name": {
+                                "value": "Soaring of Galaxia"
+                            }
+                        },
+                        {
+                            "id": "can-someone-please-explain-this-situation/",
+                            "name": {
+                                "value": "Can Someone Please Explain This Situation"
+                            }
+                        },
+                        {
+                            "id": "the-great-worm-lich/",
+                            "name": {
+                                "value": "The Great Worm Lich"
+                            }
+                        },
+                        {
+                            "id": "virtual-world-close-combat-mage/",
+                            "name": {
+                                "value": "Virtual World: Close Combat Mage"
+                            }
+                        },
+                        {
+                            "id": "empress-running-away-with-the-ball/",
+                            "name": {
+                                "value": "Empress Running Away with the Ball"
+                            }
+                        },
+                        {
+                            "id": "doomsday-wonderland/",
+                            "name": {
+                                "value": "Doomsday Wonderland"
+                            }
+                        },
+                        {
+                            "id": "two-faced-husband-have-some-decency/",
+                            "name": {
+                                "value": "Two-Faced Husband, Have Some Decency!"
+                            }
+                        },
+                        {
+                            "id": "strongest-abandoned-son/",
+                            "name": {
+                                "value": "Strongest Abandoned Son"
+                            }
+                        },
+                        {
+                            "id": "my-extraordinary-achievements/",
+                            "name": {
+                                "value": "My Extraordinary Achievements"
+                            }
+                        },
+                        {
+                            "id": "i-found-a-planet/",
+                            "name": {
+                                "value": "I Found A Planet"
+                            }
+                        },
+                        {
+                            "id": "red-envelope-group-of-the-three-realms/",
+                            "name": {
+                                "value": "Red Envelope Group of the Three Realms"
+                            }
+                        },
+                        {
+                            "id": "pet-king/",
+                            "name": {
+                                "value": "Pet King"
+                            }
+                        },
+                        {
+                            "id": "dominating-sword-immortal/",
+                            "name": {
+                                "value": "Dominating Sword Immortal"
+                            }
+                        },
+                        {
+                            "id": "arifureta-shokugyou-de-sekai-saikyou-wn/",
+                            "name": {
+                                "value": "Arifureta Shokugyou de Sekai Saikyou (WN)"
+                            }
+                        },
+                        {
+                            "id": "the-strange-adventure-of-a-broke-mercenary/",
+                            "name": {
+                                "value": "The Strange Adventure of a Broke Mercenary"
+                            }
+                        },
+                        {
+                            "id": "tempest-of-the-stellar-war/",
+                            "name": {
+                                "value": "Tempest of the Stellar War"
+                            }
+                        },
+                        {
+                            "id": "green-skin/",
+                            "name": {
+                                "value": "Green Skin"
+                            }
+                        },
+                        {
+                            "id": "reincarnator/",
+                            "name": {
+                                "value": "Reincarnator"
+                            }
+                        },
+                        {
+                            "id": "chief-kim-and-assistant-manager-choi/",
+                            "name": {
+                                "value": "Chief Kim and Assistant manager Choi"
+                            }
+                        },
+                        {
+                            "id": "the-president-is-being-shameless-again/",
+                            "name": {
+                                "value": "The President is Being Shameless Again"
+                            }
+                        },
+                        {
+                            "id": "itai-no-wa-iya-nanode-bogyo-ryoku-ni-kyokufuri-shitai-to-omoimasu/",
+                            "name": {
+                                "value": "Itai no wa Iya nanode Bōgyo-Ryoku ni Kyokufuri Shitai to Omoimasu"
+                            }
+                        },
+                        {
+                            "id": "death-scripture/",
+                            "name": {
+                                "value": "Death Scripture"
+                            }
+                        },
+                        {
+                            "id": "shift-the-side-character-heroine/",
+                            "name": {
+                                "value": "Shift! The Side-Character Heroine"
+                            }
+                        },
+                        {
+                            "id": "strike-back-proud-goddess/",
+                            "name": {
+                                "value": "Strike Back, Proud Goddess!"
+                            }
+                        },
+                        {
+                            "id": "the-girl-who-restarted-time/",
+                            "name": {
+                                "value": "The Girl Who Restarted Time"
+                            }
+                        },
+                        {
+                            "id": "rise-of-humanity/",
+                            "name": {
+                                "value": "Rise of Humanity"
+                            }
+                        },
+                        {
+                            "id": "a-demon-lords-tale-dungeons-monster-girls-and-heartwarming-bliss/",
+                            "name": {
+                                "value": "A Demon Lord’s Tale: Dungeons, Monster Girls, and Heartwarming Bliss"
+                            }
+                        },
+                        {
+                            "id": "tensei-kenja-no-isekai-raifu-daini-no-shokugyo-wo-ete-sekai-saikyou-ni-narimashita/",
+                            "name": {
+                                "value": "Tensei Kenja no Isekai Raifu ~Daini no Shokugyo wo Ete, Sekai Saikyou ni Narimashita~"
+                            }
+                        },
+                        {
+                            "id": "the-world-of-otome-games-is-tough-for-mobs/",
+                            "name": {
+                                "value": "The World of Otome Games is Tough For Mobs"
+                            }
+                        },
+                        {
+                            "id": "koko-wa-ore-ni-makasete-saki-ni-ike-to-itte-kara-10-nen-ga-tattara-densetsu-ni-natteita/",
+                            "name": {
+                                "value": "Koko wa Ore ni Makasete Saki ni Ike to Itte kara 10 Nen ga Tattara Densetsu ni Natteita"
+                            }
+                        },
+                        {
+                            "id": "the-demonic-king-chases-his-wife-the-rebellious-good-for-nothing-miss/",
+                            "name": {
+                                "value": "The Demonic King Chases His Wife: The Rebellious Good-for-Nothing Miss"
+                            }
+                        },
+                        {
+                            "id": "the-scum-villains-self-saving-system/",
+                            "name": {
+                                "value": "The Scum Villain’s Self-Saving System"
+                            }
+                        },
+                        {
+                            "id": "otherworldly-evil-monarch/",
+                            "name": {
+                                "value": "Otherworldly Evil Monarch"
+                            }
+                        },
+                        {
+                            "id": "picked-up-by-the-protagonist-of-a-tormented-mc-novel/",
+                            "name": {
+                                "value": "Picked up by the Protagonist of a Tormented! MC Novel"
+                            }
+                        },
+                        {
+                            "id": "every-vicious-woman-needs-a-loyal-man/",
+                            "name": {
+                                "value": "Every Vicious Woman Needs a Loyal Man"
+                            }
+                        },
+                        {
+                            "id": "running-away-from-the-hero-remake/",
+                            "name": {
+                                "value": "Running Away From The Hero! (Remake)"
+                            }
+                        },
+                        {
+                            "id": "after-being-transported-into-a-book-i-adopted-the-villain/",
+                            "name": {
+                                "value": "After Being Transported into a Book, I Adopted the Villain"
+                            }
+                        },
+                        {
+                            "id": "shini-yasui-koshaku-reijo-to-nana-ri-no-kikoshi/",
+                            "name": {
+                                "value": "Shini Yasui Kōshaku Reijō to Nana-ri no Kikōshi"
+                            }
+                        },
+                        {
+                            "id": "ghostly-masked-prince-xiao-pampering-and-spoiling-the-little-adorable-consort/",
+                            "name": {
+                                "value": "Ghostly Masked Prince Xiao: Pampering and Spoiling the Little Adorable Consort"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-a-movie-star/",
+                            "name": {
+                                "value": "Rebirth of a Movie Star"
+                            }
+                        },
+                        {
+                            "id": "seizing-dreams/",
+                            "name": {
+                                "value": "Seizing Dreams"
+                            }
+                        },
+                        {
+                            "id": "the-rebirth-of-the-malicious-empress-of-military-lineage/",
+                            "name": {
+                                "value": "The Rebirth of the Malicious Empress of Military Lineage"
+                            }
+                        },
+                        {
+                            "id": "magic-gems-gourmet/",
+                            "name": {
+                                "value": "Magic Gems Gourmet"
+                            }
+                        },
+                        {
+                            "id": "my-death-flags-show-no-sign-of-ending/",
+                            "name": {
+                                "value": "My Death Flags Show No Sign of Ending"
+                            }
+                        },
+                        {
+                            "id": "im-the-evil-lord-of-an-intergalactic-empire/",
+                            "name": {
+                                "value": "I’m the Evil Lord of an Intergalactic Empire!"
+                            }
+                        },
+                        {
+                            "id": "sha-po-lang/",
+                            "name": {
+                                "value": "Sha Po Lang"
+                            }
+                        },
+                        {
+                            "id": "heaven-officials-blessing/",
+                            "name": {
+                                "value": "Heaven Official’s Blessing"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-wolfish-silkpants-bottom/",
+                            "name": {
+                                "value": "Rebirth of the Wolfish Silkpants Bottom"
+                            }
+                        },
+                        {
+                            "id": "lord-xue-ying/",
+                            "name": {
+                                "value": "Lord Xue Ying"
+                            }
+                        },
+                        {
+                            "id": "overlord-love-me-tender/",
+                            "name": {
+                                "value": "Overlord, Love Me Tender"
+                            }
+                        },
+                        {
+                            "id": "the-path-toward-heaven/",
+                            "name": {
+                                "value": "The Path Toward Heaven"
+                            }
+                        },
+                        {
+                            "id": "survival-records-of-3650-days-in-the-otherworld/",
+                            "name": {
+                                "value": "Survival Records of 3650 days in the Otherworld"
+                            }
+                        },
+                        {
+                            "id": "the-record-of-unusual-creatures/",
+                            "name": {
+                                "value": "The Record of Unusual Creatures"
+                            }
+                        },
+                        {
+                            "id": "the-sage-who-transcended-samsara/",
+                            "name": {
+                                "value": "The Sage Who Transcended Samsara"
+                            }
+                        },
+                        {
+                            "id": "painting-of-the-nine-immortals/",
+                            "name": {
+                                "value": "Painting of the Nine Immortals"
+                            }
+                        },
+                        {
+                            "id": "major-generals-smart-and-gorgeous-wife/",
+                            "name": {
+                                "value": "Major General’s Smart and Gorgeous Wife"
+                            }
+                        },
+                        {
+                            "id": "lazy-dungeon-master/",
+                            "name": {
+                                "value": "Lazy Dungeon Master"
+                            }
+                        },
+                        {
+                            "id": "crazy-detective/",
+                            "name": {
+                                "value": "Crazy Detective"
+                            }
+                        },
+                        {
+                            "id": "seized-by-the-system/",
+                            "name": {
+                                "value": "Seized by the System"
+                            }
+                        },
+                        {
+                            "id": "king-of-gods/",
+                            "name": {
+                                "value": "King of Gods"
+                            }
+                        },
+                        {
+                            "id": "goodnight-kiss-from-my-rumored-husband/",
+                            "name": {
+                                "value": "Goodnight Kiss from My Rumored Husband"
+                            }
+                        },
+                        {
+                            "id": "divine-beast-adventures/",
+                            "name": {
+                                "value": "Divine Beast Adventures"
+                            }
+                        },
+                        {
+                            "id": "mr-fashionable/",
+                            "name": {
+                                "value": "Mr. Fashionable"
+                            }
+                        },
+                        {
+                            "id": "omniscient-readers-viewpoint/",
+                            "name": {
+                                "value": "Omniscient Reader’s Viewpoint"
+                            }
+                        },
+                        {
+                            "id": "godfather-of-champions/",
+                            "name": {
+                                "value": "Godfather Of Champions"
+                            }
+                        },
+                        {
+                            "id": "waiting-for-you-online/",
+                            "name": {
+                                "value": "Waiting For You Online"
+                            }
+                        },
+                        {
+                            "id": "my-boyfriend-is-a-dragon/",
+                            "name": {
+                                "value": "My Boyfriend Is A Dragon"
+                            }
+                        },
+                        {
+                            "id": "hail-the-king/",
+                            "name": {
+                                "value": "Hail the King"
+                            }
+                        },
+                        {
+                            "id": "dead-on-mars/",
+                            "name": {
+                                "value": "Dead on Mars"
+                            }
+                        },
+                        {
+                            "id": "i-am-supreme/",
+                            "name": {
+                                "value": "I Am Supreme"
+                            }
+                        },
+                        {
+                            "id": "the-ultimate-evolution/",
+                            "name": {
+                                "value": "The Ultimate Evolution"
+                            }
+                        },
+                        {
+                            "id": "legend-of-the-mythological-genes/",
+                            "name": {
+                                "value": "Legend of the Mythological Genes"
+                            }
+                        },
+                        {
+                            "id": "the-sacred-ruins/",
+                            "name": {
+                                "value": "The Sacred Ruins"
+                            }
+                        },
+                        {
+                            "id": "the-national-sweetheart-livestreamer-is-a-pro/",
+                            "name": {
+                                "value": "The National Sweetheart Livestreamer Is A Pro!"
+                            }
+                        },
+                        {
+                            "id": "release-that-man/",
+                            "name": {
+                                "value": "Release that Man"
+                            }
+                        },
+                        {
+                            "id": "the-resplendent-farming-apothecary/",
+                            "name": {
+                                "value": "The Resplendent Farming Apothecary"
+                            }
+                        },
+                        {
+                            "id": "my-master-disconnected-yet-again/",
+                            "name": {
+                                "value": "My Master Disconnected Yet Again"
+                            }
+                        },
+                        {
+                            "id": "monster-pet-evolution/",
+                            "name": {
+                                "value": "Monster Pet Evolution"
+                            }
+                        },
+                        {
+                            "id": "treasure-hunt-tycoon/",
+                            "name": {
+                                "value": "Treasure Hunt Tycoon"
+                            }
+                        },
+                        {
+                            "id": "daoist-master-of-qing-xuan/",
+                            "name": {
+                                "value": "Daoist Master of Qing Xuan"
+                            }
+                        },
+                        {
+                            "id": "the-invincible-dragon-emperor/",
+                            "name": {
+                                "value": "The Invincible Dragon Emperor"
+                            }
+                        },
+                        {
+                            "id": "low-dimensional-game/",
+                            "name": {
+                                "value": "Low Dimensional Game"
+                            }
+                        },
+                        {
+                            "id": "castle-of-black-iron/",
+                            "name": {
+                                "value": "Castle of Black Iron"
+                            }
+                        },
+                        {
+                            "id": "my-cold-and-elegant-ceo-wife/",
+                            "name": {
+                                "value": "My Cold and Elegant CEO Wife"
+                            }
+                        },
+                        {
+                            "id": "worlds-greatest-militia/",
+                            "name": {
+                                "value": "World’s Greatest Militia"
+                            }
+                        },
+                        {
+                            "id": "historys-number-1-founder/",
+                            "name": {
+                                "value": "History’s Number 1 Founder"
+                            }
+                        },
+                        {
+                            "id": "the-generals-genius-daughter/",
+                            "name": {
+                                "value": "The General’s Genius Daughter"
+                            }
+                        },
+                        {
+                            "id": "spirit-realm/",
+                            "name": {
+                                "value": "Spirit Realm"
+                            }
+                        },
+                        {
+                            "id": "magical%e2%98%85explorer/",
+                            "name": {
+                                "value": "Magical★Explorer"
+                            }
+                        },
+                        {
+                            "id": "apotheosis-of-a-demon-a-monster-evolution-story/",
+                            "name": {
+                                "value": "Apotheosis of a Demon – A Monster Evolution Story"
+                            }
+                        },
+                        {
+                            "id": "martial-arts-master/",
+                            "name": {
+                                "value": "Martial Arts Master"
+                            }
+                        },
+                        {
+                            "id": "pursuit-of-the-truth/",
+                            "name": {
+                                "value": "Pursuit of the Truth"
+                            }
+                        },
+                        {
+                            "id": "soul-of-searing-steel/",
+                            "name": {
+                                "value": "Soul of Searing Steel"
+                            }
+                        },
+                        {
+                            "id": "lady-cultivator/",
+                            "name": {
+                                "value": "Lady Cultivator"
+                            }
+                        },
+                        {
+                            "id": "black-tech-internet-cafe-system/",
+                            "name": {
+                                "value": "Black Tech Internet Cafe System"
+                            }
+                        },
+                        {
+                            "id": "my-sister-the-heroine-and-i-the-villainess/",
+                            "name": {
+                                "value": "My Sister the Heroine, and I the Villainess"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-film-emperors-beloved-wife/",
+                            "name": {
+                                "value": "Rebirth of the Film Emperor’s Beloved Wife"
+                            }
+                        },
+                        {
+                            "id": "im-not-shouldering-this-blame/",
+                            "name": {
+                                "value": "I’m Not Shouldering This Blame"
+                            }
+                        },
+                        {
+                            "id": "the-great-merchant-in-the-cataclysm/",
+                            "name": {
+                                "value": "The Great Merchant in the Cataclysm"
+                            }
+                        },
+                        {
+                            "id": "comrade-almost-a-cat-astrophic-love-story/",
+                            "name": {
+                                "value": "Comrade: Almost a Cat-astrophic Love Story"
+                            }
+                        },
+                        {
+                            "id": "level-0-master/",
+                            "name": {
+                                "value": "Level 0 Master"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-the-generals-granddaughter/",
+                            "name": {
+                                "value": "Rebirth Of The General’s Granddaughter"
+                            }
+                        },
+                        {
+                            "id": "after-brushing-face-at-the-apocalypses-boss-for-363-days/",
+                            "name": {
+                                "value": "After Brushing Face At The Apocalypse’s Boss For 363 Days"
+                            }
+                        },
+                        {
+                            "id": "ancient-godly-monarch/",
+                            "name": {
+                                "value": "Ancient Godly Monarch"
+                            }
+                        },
+                        {
+                            "id": "zhanxian/",
+                            "name": {
+                                "value": "Zhanxian"
+                            }
+                        },
+                        {
+                            "id": "tensei-shitara-slime-datta-ken-wn/",
+                            "name": {
+                                "value": "Tensei Shitara Slime Datta Ken (WN)"
+                            }
+                        },
+                        {
+                            "id": "tsuki-ga-michibiku-isekai-douchuu/",
+                            "name": {
+                                "value": "Tsuki ga Michibiku Isekai Douchuu"
+                            }
+                        },
+                        {
+                            "id": "secret-wardrobe-of-the-duchess/",
+                            "name": {
+                                "value": "Secret Wardrobe Of The Duchess"
+                            }
+                        },
+                        {
+                            "id": "fishing-the-myriad-heavens/",
+                            "name": {
+                                "value": "Fishing the Myriad Heavens"
+                            }
+                        },
+                        {
+                            "id": "my-pet-is-a-holy-maiden/",
+                            "name": {
+                                "value": "My Pet Is a Holy Maiden"
+                            }
+                        },
+                        {
+                            "id": "slimes-can-dream-too/",
+                            "name": {
+                                "value": "Slimes Can Dream Too!"
+                            }
+                        },
+                        {
+                            "id": "return-of-the-legendary-hunter/",
+                            "name": {
+                                "value": "Return of the Legendary Hunter"
+                            }
+                        },
+                        {
+                            "id": "ghost-emperor-wild-wife-dandy-eldest-miss/",
+                            "name": {
+                                "value": "Ghost Emperor Wild Wife: Dandy Eldest Miss"
+                            }
+                        },
+                        {
+                            "id": "unrivaled-tang-sect/",
+                            "name": {
+                                "value": "Unrivaled Tang Sect"
+                            }
+                        },
+                        {
+                            "id": "slow-prison-life/",
+                            "name": {
+                                "value": "Slow Prison Life"
+                            }
+                        },
+                        {
+                            "id": "hokage-ryos-path/",
+                            "name": {
+                                "value": "Hokage: Ryo’s Path"
+                            }
+                        },
+                        {
+                            "id": "historys-strongest-senior-brother/",
+                            "name": {
+                                "value": "History’s Strongest Senior Brother"
+                            }
+                        },
+                        {
+                            "id": "i-am-in-marvel/",
+                            "name": {
+                                "value": "I Am In Marvel"
+                            }
+                        },
+                        {
+                            "id": "sooho/",
+                            "name": {
+                                "value": "Sooho"
+                            }
+                        },
+                        {
+                            "id": "unbreakable/",
+                            "name": {
+                                "value": "Unbreakable"
+                            }
+                        },
+                        {
+                            "id": "back-to-the-apocalypse/",
+                            "name": {
+                                "value": "Back to the Apocalypse"
+                            }
+                        },
+                        {
+                            "id": "the-kings-avatar-for-the-glory/",
+                            "name": {
+                                "value": "The King’s Avatar – For The Glory"
+                            }
+                        },
+                        {
+                            "id": "since-ive-reincarnated-as-the-villainess-father-ill-shower-my-wife-and-daughter-in-love/",
+                            "name": {
+                                "value": "Since I’ve Reincarnated as the Villainess’ Father, I’ll Shower My Wife and Daughter in Love"
+                            }
+                        },
+                        {
+                            "id": "stealing-the-heavens/",
+                            "name": {
+                                "value": "Stealing The Heavens"
+                            }
+                        },
+                        {
+                            "id": "the-kings-avatar/",
+                            "name": {
+                                "value": "The King’s Avatar"
+                            }
+                        },
+                        {
+                            "id": "the-dreamer-in-the-spring-boudoir-2/",
+                            "name": {
+                                "value": "The Dreamer in the Spring Boudoir"
+                            }
+                        },
+                        {
+                            "id": "am-i-a-god/",
+                            "name": {
+                                "value": "Am I A God?"
+                            }
+                        },
+                        {
+                            "id": "legend-of-fu-yao/",
+                            "name": {
+                                "value": "Legend of Fu Yao"
+                            }
+                        },
+                        {
+                            "id": "paradise-of-demonic-gods/",
+                            "name": {
+                                "value": "Paradise of Demonic Gods"
+                            }
+                        },
+                        {
+                            "id": "the-promise-sealed-with-our-lips/",
+                            "name": {
+                                "value": "The Promise Sealed with Our Lips"
+                            }
+                        },
+                        {
+                            "id": "m-e-m-o-r-i-z-e/",
+                            "name": {
+                                "value": "M E M O R I Z E"
+                            }
+                        },
+                        {
+                            "id": "taming-master/",
+                            "name": {
+                                "value": "Taming Master"
+                            }
+                        },
+                        {
+                            "id": "records-of-the-dragon-follower/",
+                            "name": {
+                                "value": "Records of the Dragon Follower"
+                            }
+                        },
+                        {
+                            "id": "im-really-a-superstar/",
+                            "name": {
+                                "value": "I’m Really a Superstar"
+                            }
+                        },
+                        {
+                            "id": "mmorpg-the-elementalist/",
+                            "name": {
+                                "value": "MMORPG: The Elementalist"
+                            }
+                        },
+                        {
+                            "id": "doctor-goes-back-to-joseon/",
+                            "name": {
+                                "value": "Doctor Goes Back to Joseon"
+                            }
+                        },
+                        {
+                            "id": "mr-yuans-dilemma-cant-help-falling-in-love-with-you/",
+                            "name": {
+                                "value": "Mr. Yuan’s Dilemma: Can’t Help Falling in Love with You"
+                            }
+                        },
+                        {
+                            "id": "winter-swan/",
+                            "name": {
+                                "value": "Winter Swan"
+                            }
+                        },
+                        {
+                            "id": "commanding-wind-and-cloud/",
+                            "name": {
+                                "value": "Commanding Wind and Cloud"
+                            }
+                        },
+                        {
+                            "id": "colossus-hunter/",
+                            "name": {
+                                "value": "Colossus Hunter"
+                            }
+                        },
+                        {
+                            "id": "to-be-a-power-in-the-shadows/",
+                            "name": {
+                                "value": "To Be a Power in the Shadows!"
+                            }
+                        },
+                        {
+                            "id": "common-sense-of-a-dukes-daughter/",
+                            "name": {
+                                "value": "Common Sense of a Duke’s Daughter"
+                            }
+                        },
+                        {
+                            "id": "hidden-assassin/",
+                            "name": {
+                                "value": "Hidden Assassin"
+                            }
+                        },
+                        {
+                            "id": "mystical-journey/",
+                            "name": {
+                                "value": "Mystical Journey"
+                            }
+                        },
+                        {
+                            "id": "gate-of-god/",
+                            "name": {
+                                "value": "Gate of God"
+                            }
+                        },
+                        {
+                            "id": "the-famous-millionaire/",
+                            "name": {
+                                "value": "The Famous Millionaire"
+                            }
+                        },
+                        {
+                            "id": "demon-noble-girl-story-of-a-careless-demon/",
+                            "name": {
+                                "value": "Demon Noble Girl ~Story of a Careless Demon~"
+                            }
+                        },
+                        {
+                            "id": "the-card-apprentice/",
+                            "name": {
+                                "value": "The Card Apprentice"
+                            }
+                        },
+                        {
+                            "id": "top-management/",
+                            "name": {
+                                "value": "Top Management"
+                            }
+                        },
+                        {
+                            "id": "akuyaku-reijou-wa-danna-sama-wo-yasesasetai/",
+                            "name": {
+                                "value": "Akuyaku Reijou wa Danna-sama wo Yasesasetai"
+                            }
+                        },
+                        {
+                            "id": "the-nine-cauldrons/",
+                            "name": {
+                                "value": "The Nine Cauldrons"
+                            }
+                        },
+                        {
+                            "id": "love-rival-romance-system/",
+                            "name": {
+                                "value": "Love Rival Romance System"
+                            }
+                        },
+                        {
+                            "id": "lessons-on-raising-a-partner/",
+                            "name": {
+                                "value": "Lessons on Raising a Partner"
+                            }
+                        },
+                        {
+                            "id": "short-light-free/",
+                            "name": {
+                                "value": "Short, Light, Free"
+                            }
+                        },
+                        {
+                            "id": "legend-of-legends/",
+                            "name": {
+                                "value": "Legend of Legends"
+                            }
+                        },
+                        {
+                            "id": "omnipotent-sage/",
+                            "name": {
+                                "value": "Omnipotent Sage"
+                            }
+                        },
+                        {
+                            "id": "legend-of-ling-tian/",
+                            "name": {
+                                "value": "Legend of Ling Tian"
+                            }
+                        },
+                        {
+                            "id": "nightfall/",
+                            "name": {
+                                "value": "Nightfall"
+                            }
+                        },
+                        {
+                            "id": "the-beautiful-time-with-you/",
+                            "name": {
+                                "value": "The Beautiful Time With You"
+                            }
+                        },
+                        {
+                            "id": "the-founder-of-diabolism/",
+                            "name": {
+                                "value": "The Founder of Diabolism"
+                            }
+                        },
+                        {
+                            "id": "game-loading/",
+                            "name": {
+                                "value": "Game Loading"
+                            }
+                        },
+                        {
+                            "id": "a-valiant-life/",
+                            "name": {
+                                "value": "A Valiant Life"
+                            }
+                        },
+                        {
+                            "id": "the-world-after-the-fall/",
+                            "name": {
+                                "value": "The World after the Fall"
+                            }
+                        },
+                        {
+                            "id": "the-world-online/",
+                            "name": {
+                                "value": "The World Online"
+                            }
+                        },
+                        {
+                            "id": "silent-crown/",
+                            "name": {
+                                "value": "Silent Crown"
+                            }
+                        },
+                        {
+                            "id": "i-am-a-chef-in-the-modern-era/",
+                            "name": {
+                                "value": "I am a Chef in the Modern Era"
+                            }
+                        },
+                        {
+                            "id": "release-that-witch/",
+                            "name": {
+                                "value": "Release that Witch"
+                            }
+                        },
+                        {
+                            "id": "empress-of-otherverse/",
+                            "name": {
+                                "value": "Empress of Otherverse"
+                            }
+                        },
+                        {
+                            "id": "the-strongest-dan-god/",
+                            "name": {
+                                "value": "The Strongest Dan God"
+                            }
+                        },
+                        {
+                            "id": "neet-receives-a-dating-sim-game-leveling-system/",
+                            "name": {
+                                "value": "NEET Receives a Dating Sim Game Leveling System"
+                            }
+                        },
+                        {
+                            "id": "12-hours-after/",
+                            "name": {
+                                "value": "12 Hours After"
+                            }
+                        },
+                        {
+                            "id": "trial-marriage-husband-need-to-work-hard/",
+                            "name": {
+                                "value": "Trial Marriage Husband: Need to Work Hard"
+                            }
+                        },
+                        {
+                            "id": "a-presidents-out-of-body-experience/",
+                            "name": {
+                                "value": "A President’s Out-of-Body Experience"
+                            }
+                        },
+                        {
+                            "id": "i-can-turn-into-a-fish/",
+                            "name": {
+                                "value": "I Can Turn into a Fish"
+                            }
+                        },
+                        {
+                            "id": "swallowed-star/",
+                            "name": {
+                                "value": "Swallowed Star"
+                            }
+                        },
+                        {
+                            "id": "soaring-the-heavens/",
+                            "name": {
+                                "value": "Soaring the Heavens"
+                            }
+                        },
+                        {
+                            "id": "almighty-coach/",
+                            "name": {
+                                "value": "Almighty Coach"
+                            }
+                        },
+                        {
+                            "id": "i-reincarnated-for-nothing/",
+                            "name": {
+                                "value": "I Reincarnated For Nothing"
+                            }
+                        },
+                        {
+                            "id": "go-to-hell-white-lotus/",
+                            "name": {
+                                "value": "Go to Hell, White Lotus"
+                            }
+                        },
+                        {
+                            "id": "absolute-choice/",
+                            "name": {
+                                "value": "Absolute Choice"
+                            }
+                        },
+                        {
+                            "id": "my-dad-is-the-galaxys-prince-charming/",
+                            "name": {
+                                "value": "My Dad Is the Galaxy’s Prince Charming"
+                            }
+                        },
+                        {
+                            "id": "the-struggle-of-returning-to-the-other-world/",
+                            "name": {
+                                "value": "The Struggle of Returning to The Other World"
+                            }
+                        },
+                        {
+                            "id": "master-hunter-k/",
+                            "name": {
+                                "value": "Master Hunter K"
+                            }
+                        },
+                        {
+                            "id": "the-great-storyteller/",
+                            "name": {
+                                "value": "The Great Storyteller"
+                            }
+                        },
+                        {
+                            "id": "dreadful-radio-game/",
+                            "name": {
+                                "value": "Dreadful Radio Game"
+                            }
+                        },
+                        {
+                            "id": "god-level-summoner/",
+                            "name": {
+                                "value": "God Level Summoner"
+                            }
+                        },
+                        {
+                            "id": "artifact-reading-inspector/",
+                            "name": {
+                                "value": "Artifact Reading Inspector"
+                            }
+                        },
+                        {
+                            "id": "seeking-the-flying-sword-path/",
+                            "name": {
+                                "value": "Seeking the Flying Sword Path"
+                            }
+                        },
+                        {
+                            "id": "true-martial-world/",
+                            "name": {
+                                "value": "True Martial World"
+                            }
+                        },
+                        {
+                            "id": "dragon-kings-son-in-law/",
+                            "name": {
+                                "value": "Dragon King’s Son-In-Law"
+                            }
+                        },
+                        {
+                            "id": "i-quit-being-a-noble-and-became-a-commoner/",
+                            "name": {
+                                "value": "I Quit Being a Noble and Became a Commoner"
+                            }
+                        },
+                        {
+                            "id": "wife-you-cant-run-after-eating/",
+                            "name": {
+                                "value": "Wife, You Can’t Run After Eating"
+                            }
+                        },
+                        {
+                            "id": "super-electric-eel-avatar/",
+                            "name": {
+                                "value": "Super Electric Eel Avatar"
+                            }
+                        },
+                        {
+                            "id": "my-mcv-and-doomsday/",
+                            "name": {
+                                "value": "My MCV and Doomsday"
+                            }
+                        },
+                        {
+                            "id": "traffords-trading-club/",
+                            "name": {
+                                "value": "Trafford’s Trading Club"
+                            }
+                        },
+                        {
+                            "id": "god-of-money/",
+                            "name": {
+                                "value": "God of Money"
+                            }
+                        },
+                        {
+                            "id": "apocalypse-hunter/",
+                            "name": {
+                                "value": "Apocalypse Hunter"
+                            }
+                        },
+                        {
+                            "id": "rebirth-on-the-doors-to-the-civil-affairs-bureau/",
+                            "name": {
+                                "value": "Rebirth on the Doors to the Civil Affairs Bureau"
+                            }
+                        },
+                        {
+                            "id": "hello-wife/",
+                            "name": {
+                                "value": "Hello, Wife!"
+                            }
+                        },
+                        {
+                            "id": "evil-emperors-wild-consort/",
+                            "name": {
+                                "value": "Evil Emperor’s Wild Consort"
+                            }
+                        },
+                        {
+                            "id": "the-legendary-masters-wife/",
+                            "name": {
+                                "value": "The Legendary Master’s Wife"
+                            }
+                        },
+                        {
+                            "id": "dungeon-defense/",
+                            "name": {
+                                "value": "Dungeon Defense"
+                            }
+                        },
+                        {
+                            "id": "living-with-a-temperamental-adonis-99-proclamations-of-love/",
+                            "name": {
+                                "value": "Living With a Temperamental Adonis: 99 Proclamations of Love"
+                            }
+                        },
+                        {
+                            "id": "the-first-hunter/",
+                            "name": {
+                                "value": "The First Hunter"
+                            }
+                        },
+                        {
+                            "id": "the-royals-cute-little-wife/",
+                            "name": {
+                                "value": "The Royal’s Cute Little Wife"
+                            }
+                        },
+                        {
+                            "id": "strange-life-of-a-cat/",
+                            "name": {
+                                "value": "Strange Life of a Cat"
+                            }
+                        },
+                        {
+                            "id": "tempest-of-the-battlefield/",
+                            "name": {
+                                "value": "Tempest of the Battlefield"
+                            }
+                        },
+                        {
+                            "id": "assassins-chronicle/",
+                            "name": {
+                                "value": "Assassin’s Chronicle"
+                            }
+                        },
+                        {
+                            "id": "the-world-turned-into-a-game-after-i-woke-up/",
+                            "name": {
+                                "value": "The World Turned into a Game After I Woke up"
+                            }
+                        },
+                        {
+                            "id": "swordmeister-of-rome/",
+                            "name": {
+                                "value": "Swordmeister of Rome"
+                            }
+                        },
+                        {
+                            "id": "legend-of-the-supreme-soldier/",
+                            "name": {
+                                "value": "Legend of the Supreme Soldier"
+                            }
+                        },
+                        {
+                            "id": "it-seems-like-i-got-reincarnated-into-the-world-of-a-yandere-otome-game/",
+                            "name": {
+                                "value": "It Seems Like I Got Reincarnated Into The World of a Yandere Otome Game"
+                            }
+                        },
+                        {
+                            "id": "if-the-deep-sea-forgets-you/",
+                            "name": {
+                                "value": "If the Deep Sea Forgets You"
+                            }
+                        },
+                        {
+                            "id": "advent-of-the-archmage/",
+                            "name": {
+                                "value": "Advent of the Archmage"
+                            }
+                        },
+                        {
+                            "id": "the-strongest-system/",
+                            "name": {
+                                "value": "The Strongest System"
+                            }
+                        },
+                        {
+                            "id": "the-magus-era/",
+                            "name": {
+                                "value": "The Magus Era"
+                            }
+                        },
+                        {
+                            "id": "the-earth-is-online/",
+                            "name": {
+                                "value": "The Earth is Online"
+                            }
+                        },
+                        {
+                            "id": "full-marks-hidden-marriage-pick-up-a-son-get-a-free-husband/",
+                            "name": {
+                                "value": "Full Marks Hidden Marriage: Pick Up a Son, Get a Free Husband"
+                            }
+                        },
+                        {
+                            "id": "plundering-the-heavens/",
+                            "name": {
+                                "value": "Plundering the Heavens"
+                            }
+                        },
+                        {
+                            "id": "world-of-cultivation/",
+                            "name": {
+                                "value": "World of Cultivation"
+                            }
+                        },
+                        {
+                            "id": "the-strongest-gene/",
+                            "name": {
+                                "value": "The Strongest Gene"
+                            }
+                        },
+                        {
+                            "id": "the-wizard-world/",
+                            "name": {
+                                "value": "The Wizard World"
+                            }
+                        },
+                        {
+                            "id": "tales-of-the-reincarnated-lord/",
+                            "name": {
+                                "value": "Tales of the Reincarnated Lord"
+                            }
+                        },
+                        {
+                            "id": "adorable-food-goddess/",
+                            "name": {
+                                "value": "Adorable Food Goddess"
+                            }
+                        },
+                        {
+                            "id": "the-chronicles-of-the-immortal-god/",
+                            "name": {
+                                "value": "The Chronicles of the Immortal God"
+                            }
+                        },
+                        {
+                            "id": "stunning-edge/",
+                            "name": {
+                                "value": "Stunning Edge"
+                            }
+                        },
+                        {
+                            "id": "the-heavily-armoured-noble-girl-monette-how-to-break-a-curse-you-dont-remember-casting/",
+                            "name": {
+                                "value": "The Heavily Armoured Noble Girl Monette: How To Break a Curse You Don’t Remember Casting"
+                            }
+                        },
+                        {
+                            "id": "god-and-devil-world/",
+                            "name": {
+                                "value": "God and Devil World"
+                            }
+                        },
+                        {
+                            "id": "the-legend-of-chu-qiao-division-11s-princess-agent/",
+                            "name": {
+                                "value": "The Legend of Chu Qiao: Division 11’s Princess Agent"
+                            }
+                        },
+                        {
+                            "id": "the-avalon-of-five-elements/",
+                            "name": {
+                                "value": "The Avalon of Five Elements"
+                            }
+                        },
+                        {
+                            "id": "a-billion-stars-cant-amount-to-you/",
+                            "name": {
+                                "value": "A Billion Stars Can’t Amount to You"
+                            }
+                        },
+                        {
+                            "id": "golden-time/",
+                            "name": {
+                                "value": "Golden Time"
+                            }
+                        },
+                        {
+                            "id": "when-a-snail-falls-in-love/",
+                            "name": {
+                                "value": "When A Snail Falls in Love"
+                            }
+                        },
+                        {
+                            "id": "when-a-mage-revolts/",
+                            "name": {
+                                "value": "When A Mage Revolts"
+                            }
+                        },
+                        {
+                            "id": "valhalla-saga/",
+                            "name": {
+                                "value": "Valhalla Saga"
+                            }
+                        },
+                        {
+                            "id": "goddess-medical-doctor/",
+                            "name": {
+                                "value": "Goddess Medical Doctor"
+                            }
+                        },
+                        {
+                            "id": "galactic-dark-net/",
+                            "name": {
+                                "value": "Galactic Dark Net"
+                            }
+                        },
+                        {
+                            "id": "rebirth-of-a-supermodel/",
+                            "name": {
+                                "value": "Rebirth of a Supermodel"
+                            }
+                        },
+                        {
+                            "id": "night-ranger/",
+                            "name": {
+                                "value": "Night Ranger"
+                            }
+                        },
+                        {
+                            "id": "shuras-wrath/",
+                            "name": {
+                                "value": "Shura’s Wrath"
+                            }
+                        },
+                        {
+                            "id": "dragoon/",
+                            "name": {
+                                "value": "Dragoon"
+                            }
+                        },
+                        {
+                            "id": "manuscript-screening-boy-and-manuscript-submitting-girl/",
+                            "name": {
+                                "value": "Manuscript Screening Boy and Manuscript Submitting Girl"
+                            }
+                        },
+                        {
+                            "id": "mr-ceo-spoil-me-100-percent/",
+                            "name": {
+                                "value": "Mr. CEO, Spoil me 100 Percent!"
+                            }
+                        },
+                        {
+                            "id": "seoul-stations-necromancer/",
+                            "name": {
+                                "value": "Seoul Station’s Necromancer"
+                            }
+                        },
+                        {
+                            "id": "our-glamorous-time/",
+                            "name": {
+                                "value": "Our Glamorous Time"
+                            }
+                        },
+                        {
+                            "id": "immortal-mortal/",
+                            "name": {
+                                "value": "Immortal Mortal"
+                            }
+                        },
+                        {
+                            "id": "my-hero/",
+                            "name": {
+                                "value": "My Hero"
+                            }
+                        },
+                        {
+                            "id": "its-because-you-said-there-would-be-candy/",
+                            "name": {
+                                "value": "It’s Because You Said There Would Be Candy!!"
+                            }
+                        },
+                        {
+                            "id": "a-game-to-make-him-fall/",
+                            "name": {
+                                "value": "A Game To Make Him Fall"
+                            }
+                        },
+                        {
+                            "id": "about-the-reckless-girl-who-kept-challenging-a-reborn-man-like-me/",
+                            "name": {
+                                "value": "About the Reckless Girl Who Kept Challenging a Reborn Man Like Me"
+                            }
+                        },
+                        {
+                            "id": "sovereign-of-judgment/",
+                            "name": {
+                                "value": "Sovereign of Judgment"
+                            }
+                        },
+                        {
+                            "id": "seven-unfortunate-lifetimes-all-thanks-to-a-single-moment-of-impulse/",
+                            "name": {
+                                "value": "Seven Unfortunate Lifetimes, All Thanks to a Single Moment of Impulse"
+                            }
+                        },
+                        {
+                            "id": "our-second-master/",
+                            "name": {
+                                "value": "Our Second Master"
+                            }
+                        },
+                        {
+                            "id": "sansheng-wangchuan-wu-shang/",
+                            "name": {
+                                "value": "Sansheng, Wangchuan Wu Shang"
+                            }
+                        },
+                        {
+                            "id": "quickly-wear-the-face-of-the-devil/",
+                            "name": {
+                                "value": "Quickly Wear the Face of the Devil"
+                            }
+                        },
+                        {
+                            "id": "chongfei-manual/",
+                            "name": {
+                                "value": "Chongfei Manual"
+                            }
+                        },
+                        {
+                            "id": "douluo-dalu/",
+                            "name": {
+                                "value": "Douluo Dalu"
+                            }
+                        },
+                        {
+                            "id": "demon-wangs-golden-favorite-fei/",
+                            "name": {
+                                "value": "Demon Wang’s Golden Favorite Fei"
+                            }
+                        },
+                        {
+                            "id": "eight-treasures-trousseau/",
+                            "name": {
+                                "value": "Eight Treasures Trousseau"
+                            }
+                        },
+                        {
+                            "id": "my-disciple-died-yet-again/",
+                            "name": {
+                                "value": "My Disciple Died Yet Again"
+                            }
+                        },
+                        {
+                            "id": "heavenly-jewel-change/",
+                            "name": {
+                                "value": "Heavenly Jewel Change"
+                            }
+                        },
+                        {
+                            "id": "ze-tian-ji/",
+                            "name": {
+                                "value": "Ze Tian Ji"
+                            }
+                        },
+                        {
+                            "id": "a-mistaken-marriage-match-record-of-washed-grievances/",
+                            "name": {
+                                "value": "A Mistaken Marriage Match: Record of Washed Grievances"
+                            }
+                        },
+                        {
+                            "id": "breakers/",
+                            "name": {
+                                "value": "Breakers"
+                            }
+                        },
+                        {
+                            "id": "dimensional-sovereign/",
+                            "name": {
+                                "value": "Dimensional Sovereign"
+                            }
+                        },
+                        {
+                            "id": "megami-buchigire/",
+                            "name": {
+                                "value": "Megami Buchigire"
+                            }
+                        },
+                        {
+                            "id": "i-shall-seal-the-heavens/",
+                            "name": {
+                                "value": "I Shall Seal the Heavens"
+                            }
+                        },
+                        {
+                            "id": "the-book-eating-magician/",
+                            "name": {
+                                "value": "The Book Eating Magician"
+                            }
+                        },
+                        {
+                            "id": "the-desolate-era/",
+                            "name": {
+                                "value": "The Desolate Era"
+                            }
+                        },
+                        {
+                            "id": "world-reformation-activities-of-the-dark-god-loving-humans-so-much-i-reincarnated-in-one/",
+                            "name": {
+                                "value": "World Reformation Activities of the Dark God — Loving Humans So Much, I Reincarnated in One"
+                            }
+                        },
+                        {
+                            "id": "would-you-mind-if-i-play/",
+                            "name": {
+                                "value": "Would You Mind If I Play?"
+                            }
+                        },
+                        {
+                            "id": "cataclysmic-transformation/",
+                            "name": {
+                                "value": "Cataclysmic Transformation"
+                            }
+                        },
+                        {
+                            "id": "upstart-pastry-chef-territory-management-of-a-genius-patisserie/",
+                            "name": {
+                                "value": "Upstart Pastry Chef ~Territory Management of a Genius Pâtisserie~"
+                            }
+                        },
+                        {
+                            "id": "bringing-the-nations-husband-home/",
+                            "name": {
+                                "value": "Bringing the Nation’s Husband Home"
+                            }
+                        },
+                        {
+                            "id": "in-different-world-with-naruto-system/",
+                            "name": {
+                                "value": "In Different World with Naruto System"
+                            }
+                        },
+                        {
+                            "id": "husband-be-a-gentleman/",
+                            "name": {
+                                "value": "Husband, Be A Gentleman"
+                            }
+                        },
+                        {
+                            "id": "sevens/",
+                            "name": {
+                                "value": "Sevens"
+                            }
+                        },
+                        {
+                            "id": "to-be-a-virtuous-wife/",
+                            "name": {
+                                "value": "To Be A Virtuous Wife"
+                            }
+                        },
+                        {
+                            "id": "god-of-crime/",
+                            "name": {
+                                "value": "God of Crime"
+                            }
+                        },
+                        {
+                            "id": "k-sideblue/",
+                            "name": {
+                                "value": "K SIDE:BLUE"
+                            }
+                        },
+                        {
+                            "id": "alluring-poisonous-consort-overwhelms-the-demonic-king/",
+                            "name": {
+                                "value": "Alluring Poisonous Consort: Overwhelms the Demonic King"
+                            }
+                        },
+                        {
+                            "id": "tsuujou-kougeki-ga-zentai-kougeki-de-ni-kai-kougeki-no-okaa-san-wa-suki-desu-ka/",
+                            "name": {
+                                "value": "Tsuujou Kougeki ga Zentai Kougeki de Ni-kai Kougeki no Okaa-san wa Suki desu ka?"
+                            }
+                        },
+                        {
+                            "id": "awakening/",
+                            "name": {
+                                "value": "Awakening"
+                            }
+                        },
+                        {
+                            "id": "everyone-else-is-a-returnee/",
+                            "name": {
+                                "value": "Everyone Else is a Returnee"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ReadNovel",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "novelName",
+                            "type": "boxNovel",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "chapterNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-ReadNovel.IntentSlot-chapterNumber"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "SKILL_RESPONSE"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-ReadNovel.IntentSlot-chapterNumber",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What chapter?"
+                    }
+                ]
+            }
+        ]
+    }
+}
