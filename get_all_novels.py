@@ -24,7 +24,10 @@ def main():
             soup = bs4.BeautifulSoup(page, 'html.parser')
             for item in soup.find_all('div', class_='post-title'):
                 a = item.find('a')
-                novel_list += '"' + a.get_text() + '"' + ',' + a.get('href') + ',\n'
+                novel = '"' + a.get_text() + '"' + ',' + \
+                        a.get('href').replace('https://boxnovel.com/novel/', '') + ',\n'
+                if len(novel) < 200:
+                    novel_list += novel
 
             page_num += 1
 

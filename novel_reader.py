@@ -1,11 +1,13 @@
-import pyrebase
 from bs4 import BeautifulSoup
 import urllib.request
 
 
+host = 'https://boxnovel.com/novel/'
+
+
 def alexa_handler(event, context):
-    app_id = ""
-    response_size = 10
+    app_id = "amzn1.ask.skill.00881ef7-313d-4e33-b116-aeadb33598fc"
+    response_size = 20
 
     response = {
         "version": "1.0",
@@ -13,7 +15,8 @@ def alexa_handler(event, context):
         "response": {
             "outputSpeech": {
                 "type": "PlainText"
-            }
+            },
+            "shouldEndSession": "false"
         }
     }
 
@@ -22,61 +25,43 @@ def alexa_handler(event, context):
         if request_type == 'LaunchRequest':
             response_text = "What would you like to read"
         elif request_type == 'IntentRequest':
-            config = {
-                "apiKey": "",
-                "authDomain": "",
-                "databaseURL": "",
-                "projectId": "",
-                "storageBucket": "",
-                "messagingSenderId": ""
-            }
-
-            firebase = pyrebase.initialize_app(config)
-            auth = firebase.auth()
-            user = auth.sign_in_with_email_and_password("", "")
-            db = firebase.database()
-
             intent_name = event['request']['intent']['name']
-            if intent_name == 'GetNovels':
-                retrieval_size = 100
-                for key, val in event['request']['intent']['slots'].items():
-                    if key == 'numNovels' and 'value' in val:
-                        if val['value'] is not None:
-                            retrieval_size = int(val['value'])
-                novels = db.child("novels").order_by_key().limit_to_first(retrieval_size).get(user['idToken'])
-                response_text = ''
-                for novel in novels.each():
-                    response_text += novel.key() + ','
-            elif intent_name == 'ReadNovel':
-                novel_name = ''
-                chapter_num = '1'
-                for key, val in event['request']['intent']['slots'].items():
-                    if key == 'novelName' and 'value' in val:
-                        novel_name = val['value']
-                    elif key == 'chapterNumber' and 'value' in val:
-                        if val['value'] is not None:
-                            chapter_num = val['value']
-                real_novel_name = \
-                    ((db.child("synonyms").order_by_key().equal_to(novel_name).get(user['idToken'])).val())[novel_name]
 
-                novel_text = get_novel_text(db, user, real_novel_name, chapter_num)
-                if novel_text is not None:
-                    text_slice = get_novel_text_slice(novel_text, 0, response_size)
+            if intent_name == 'ReadNovel':
+                slots_key = event['request']['intent']['slots']
 
-                    response_text = text_slice[0]
-
-                    response['sessionAttributes']['end'] = text_slice[1]
-                    response['sessionAttributes']['currentNovel'] = real_novel_name
-                    response['sessionAttributes']['currentChapter'] = chapter_num
+                if slots_key['novelName']['resolutions']['resolutionsPerAuthority'][0]['status']['code'] == \
+                        'ER_SUCCESS_NO_MATCH':
+                    response_text = "Failed to recognize request"
                 else:
-                    response_text = "Novel text not found"
+                    novel_name = \
+                        slots_key['novelName']['resolutions']['resolutionsPerAuthority'][0]['values'][0]['value']['id']
+
+                    if 'value' in slots_key['chapterNumber']:
+                        chapter_num = slots_key['chapterNumber']['value']
+                    else:
+                        chapter_num = '1'
+
+                    novel_text = get_novel_text(novel_name, chapter_num)
+                    if novel_text is not None:
+                        text_slice = get_novel_text_slice(novel_text, 0, response_size)
+
+                        response_text = text_slice[0]
+
+                        response['sessionAttributes']['end'] = text_slice[1]
+                        response['sessionAttributes']['currentNovel'] = novel_name
+                        response['sessionAttributes']['currentChapter'] = chapter_num
+                    else:
+                        response_text = "Novel text not found"
             elif intent_name == 'ContinueReading':
-                if 'currentNovel' in event['session']['attributes']:
+                if 'attributes' not in event['session']:
+                    response_text = "Nothing to continue reading"
+                elif 'currentNovel' in event['session']['attributes']:
                     if 'currentChapter' in event['session']['attributes']:
                         novel_name = event['session']['attributes']['currentNovel']
                         chapter_num = event['session']['attributes']['currentChapter']
 
-                        novel_text = get_novel_text(db, user, novel_name, chapter_num)
+                        novel_text = get_novel_text(novel_name, chapter_num)
                         if novel_text is not None:
                             if 'end' in event['session']['attributes']:
                                 end = int(event['session']['attributes']['end'])
@@ -97,13 +82,15 @@ def alexa_handler(event, context):
                 else:
                     response_text = 'Nothing to continue reading'
             elif intent_name == 'NextChapter':
-                if 'currentNovel' in event['session']['attributes']:
+                if 'attributes' not in event['session']:
+                    response_text = "Nothing to continue reading"
+                elif 'currentNovel' in event['session']['attributes']:
                     if 'currentChapter' in event['session']['attributes']:
                         novel_name = event['session']['attributes']['currentNovel']
                         chapter_num = event['session']['attributes']['currentChapter']
                         chapter_num = str((int(chapter_num) + 1))
 
-                        novel_text = get_novel_text(db, user, novel_name, chapter_num)
+                        novel_text = get_novel_text(novel_name, chapter_num)
                         if novel_text is not None:
                             text_slice = get_novel_text_slice(novel_text, 0, response_size)
 
@@ -131,28 +118,16 @@ def alexa_handler(event, context):
     return response
 
 
-def exclude_paging_links(tag):
-    if tag.name == 'p':
-        for child in tag.descendants:
-            if child.name == 'a':
-                return False
-        return True
-    else:
-        return False
-
-
-def get_novel_text(db, user, title, chapter):
-    novel_data = db.child("novels").order_by_key().equal_to(title).get(user['idToken'])
-    novel_val = (novel_data.val())[title]
-    chapter_url = novel_val['chapter'].replace('{chapterNum}', chapter)
+def get_novel_text(title, chapter_num):
+    chapter_url = host + title + 'chapter-' + str(chapter_num)
     req = urllib.request.Request(chapter_url, data=None, headers={'User-Agent': 'Mozilla/5.0'})
     page = urllib.request.urlopen(req)
     soup = BeautifulSoup(page, "html.parser")
-    return soup.find(itemprop='articleBody')
+    return soup.find('div', class_='reading-content')
 
 
 def get_novel_text_slice(novel_text, start, response_size):
-    text = novel_text.find_all(exclude_paging_links)
+    text = novel_text.find_all('p')
     length = len(text)
     new_end = -1
     response_text = ''
@@ -163,7 +138,7 @@ def get_novel_text_slice(novel_text, start, response_size):
             new_end = length
 
         for tag in text[start:new_end]:
-            response_text += tag.string + ' '
+            response_text += tag.get_text() + ' '
 
         if new_end == length:
             response_text += '. End of chapter. Next chapter?'
