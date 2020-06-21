@@ -1,3 +1,6 @@
+# Scrapes the names of all the novels on boxnovel
+# and stores them in a text file in csv format
+
 import bs4
 import urllib.request
 import urllib.error
@@ -24,8 +27,10 @@ def main():
             soup = bs4.BeautifulSoup(page, 'html.parser')
             for item in soup.find_all('div', class_='post-title'):
                 a = item.find('a')
+                # Grabs the name and url of the novel
                 novel = '"' + a.get_text() + '"' + ',' + \
                         a.get('href').replace('https://boxnovel.com/novel/', '') + ',\n'
+                # there is a character limit when adding to an alexa skill slot type so some novel names/urls are left out
                 if len(novel) < 200:
                     novel_list += novel
 
