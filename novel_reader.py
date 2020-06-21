@@ -1,3 +1,5 @@
+# Handles the response for the alexa skill
+
 from bs4 import BeautifulSoup
 import urllib.request
 
@@ -91,6 +93,7 @@ def alexa_handler(event, context):
                         chapter_num = str((int(chapter_num) + 1))
 
                         novel_text = get_novel_text(novel_name, chapter_num)
+                        # Gets only part of a novel chapter due to the response size limit
                         if novel_text is not None:
                             text_slice = get_novel_text_slice(novel_text, 0, response_size)
 
@@ -118,6 +121,7 @@ def alexa_handler(event, context):
     return response
 
 
+# Gets the full text of a novel chapter
 def get_novel_text(title, chapter_num):
     chapter_url = host + title + 'chapter-' + str(chapter_num)
     req = urllib.request.Request(chapter_url, data=None, headers={'User-Agent': 'Mozilla/5.0'})
@@ -126,6 +130,7 @@ def get_novel_text(title, chapter_num):
     return soup.find('div', class_='reading-content')
 
 
+# Gets part of the text of a novel chapter
 def get_novel_text_slice(novel_text, start, response_size):
     text = novel_text.find_all('p')
     length = len(text)
